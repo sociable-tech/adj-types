@@ -1,6 +1,6 @@
 {
   "name": "@adjudication/types",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "The project refers to the types of Adjudication package that will be published to NPM and shared between backend and frontend for reusablity and ensuring consistency.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
