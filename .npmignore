@@ -1,0 +1,12 @@
+.history/
+node_modules/
+src/
+.gitignore
+.npmignore
+tsconfig.json
+.git/
+.github/
+.vscode/
+.env
+coverage/
+*.log
