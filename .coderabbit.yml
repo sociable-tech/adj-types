@@ -1,0 +1,16 @@
+version: 1
+rules:
+  - id: summarize-pr
+    event: pull_request
+    steps:
+      - summarize:
+          target: pr_description
+          title: "PR Summary for CHANGELOG"
+          append_to_file: "CHANGELOG.md"
+  - id: readme-update
+    event: pull_request
+    steps:
+      - summarize:
+          target: pr_description
+          title: "Suggested README.md Update"
+          append_to_file: "README.md"
