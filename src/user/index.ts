@@ -1,14 +1,21 @@
-
 export enum UserRole {
-  ADMIN = 'ADMIN',
-  REVIEWER = 'REVIEWER',
-  APPLICANT = 'APPLICANT'
+  CLAIMANT = 'claimant',
+  RESPONDENT = 'respondent',
+  SERVICE_PROVIDER = 'service_provider',
+  ADMIN = 'admin'
 }
+
+export const USER_ROLES = [
+  UserRole.CLAIMANT,
+  UserRole.RESPONDENT,
+  UserRole.SERVICE_PROVIDER,
+  UserRole.ADMIN
+];
 
 export interface User {
   id: string;
   name: string;
   email: string;
-  role?: string;
+  role?: UserRole;
   accessToken?: string;
 }
