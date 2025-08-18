@@ -205,22 +205,3 @@ export const sopanswQuestionnaire: Questionnaire = {
     isActive: true,
     isPublic: true
 };
-
-// This is a mock response to the sopanswQuestionnaire.
-export const sopanswResponseMock: QuestionnaireResponse = {
-  questionnaireId: "sopa-nsw-eligibility",
-  userId: "user123",
-  responses: {
-    Q1: { key: "full_name", answer: "John Doe" },
-    Q2: { key: "abn_acn", answer: "12345678901" },
-    Q3: { key: "financial_contract", answer: "No" },
-    Q6: { key: "construction_related", answer: "Yes" },
-    Q7: { key: "nsw_construction", answer: "Yes" },
-    Q8: { key: "scope_s6", answer: "Yes" },
-    Q9: { key: "provider_category", answer: "Goods Provider" },
-    Q10: { key: "goods_materials", answer: "Yes" },
-    Q15: { key: "employee_status", answer: "No" },
-    Q16: { key: "additional_notes", answer: "Using custom materials for NSW project." }
-  },
-  submittedAt: new Date("2025-08-18T14:00:00Z")
-};
