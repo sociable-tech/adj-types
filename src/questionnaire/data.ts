@@ -9,8 +9,8 @@ export const sopanswQuestionnaire: Questionnaire = {
         // Section 1: Identification
         {
             id: "Q1",
-            text: "What is your full name?",
-            key: "full_name",
+            text: "What is the person or organisation name (as per contract)?",
+            key: "contract_party_name",
             parent: null,
             section: "Identification",
             dependantAnswer: null,
