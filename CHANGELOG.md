@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.2.2 (2025-08-20)
+
+
+### Bug Fixes
+
+* update question text and key in sopanswQuestionnaire for clarity ([#5](https://github.com/sociable-tech/adj-types/issues/5)) ([009a657](https://github.com/sociable-tech/adj-types/commit/009a6572812244b8b97b9d24587d9952faa06a9d))
+
 ### 1.2.1 (2025-08-18)
 
 ## 1.2.0 (2025-08-15)
