@@ -36,3 +36,54 @@ export type QuestionnaireResponse = {
     >;
     submittedAt: Date;
 };
+
+// Enums for qualification and evaluation
+export enum QualificationType {
+  GOODS_PROVIDER = 'Goods Provider',
+  SERVICE_PROVIDER_CONSULTANT = 'Service Provider/Consultant',
+  BUILDER = 'Builder'
+}
+
+export enum DisqualifierType {
+  FINANCIAL_CONTRACT = 'Financial Contract',
+  FINANCIAL_INSTITUTION_CONTRACT = 'Financial Institution Contract',
+  OUTSIDE_NSW_JURISDICTION = 'Outside NSW Jurisdiction'
+}
+
+export enum EligibilityStatus {
+  ELIGIBLE = 'eligible',
+  INELIGIBLE = 'ineligible'
+}
+
+// Type definitions for better type safety
+export type AnswerValue = string | boolean | string[] | null;
+
+export interface QuestionnaireResponseOptimized {
+  [questionId: string]: {
+    key: string;
+    answer: AnswerValue;
+  };
+}
+
+export interface QualificationResult {
+  type: QualificationType;
+  description: string;
+  recommendation: string;
+}
+
+export interface DisqualifierResult {
+  type: DisqualifierType;
+  description: string;
+  recommendation: string;
+}
+
+export interface PathEvaluationResult {
+  disqualifiers: DisqualifierResult[];
+  qualifiers: QualificationResult[];
+}
+
+export interface ParserResponse {
+  eligible: boolean;
+  qualifications: Record<QualificationType, { description: string; recommendation: string }>;
+  disqualifiers: Record<DisqualifierType, { description: string; recommendation: string }>;
+}
