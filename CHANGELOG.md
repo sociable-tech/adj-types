@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.3.0 (2025-08-22)
+
+
+### Features
+
+* add qualification and disqualifier enums, response messages, and update exports in questionnaire module ([#6](https://github.com/sociable-tech/adj-types/issues/6)) ([5350354](https://github.com/sociable-tech/adj-types/commit/5350354db48b7deffebd468eedf0e7764d3f0f95))
+
 ### 1.2.2 (2025-08-20)
 
 
