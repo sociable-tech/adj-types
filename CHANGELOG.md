@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.4.0 (2025-08-25)
+
+
+### Features
+
+* enhance response messages with consistent recommendations for qualifications and disqualifications ([#7](https://github.com/sociable-tech/adj-types/issues/7)) ([8b7adac](https://github.com/sociable-tech/adj-types/commit/8b7adacc5496d57386a2de87603bca7fa5c5d24b))
+
 ## 1.3.0 (2025-08-22)
 
 
