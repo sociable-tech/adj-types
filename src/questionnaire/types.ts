@@ -47,7 +47,7 @@ export enum QualificationType {
 export enum DisqualifierType {
   FINANCIAL_CONTRACT = 'Financial Contract',
   FINANCIAL_INSTITUTION_CONTRACT = 'Financial Institution Contract',
-  OUTSIDE_NSW_JURISDICTION = 'Outside NSW Jurisdiction',
+    OUTSIDE_NSW_JURISDICTION = 'Outside NSW Jurisdiction',
   GOODS_PROVIDER = 'Goods Provider' 
 }
 
@@ -84,6 +84,8 @@ export interface PathEvaluationResult {
 }
 
 export interface ParserResponse {
+  ticket: string;
+  status: "pending" | "completed" | "error";
   eligible: boolean;
   qualifications: Record<QualificationType, { description: string; recommendation: string }>;
   disqualifiers: Record<DisqualifierType, { description: string; recommendation: string }>;
