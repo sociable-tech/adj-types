@@ -34,7 +34,8 @@ export enum Permission {
   // Admin permissions
   ADMIN_MANAGE_USERS = 'admin:manage_users',
   ADMIN_MANAGE_ROLES = 'admin:manage_roles',
-  ADMIN_VIEW_ANALYTICS = 'admin:view_analytics'
+  ADMIN_VIEW_ANALYTICS = 'admin:view_analytics',
+  ADMIN_BAN_USERS = 'admin:ban_users',
 }
 
 export const PERMISSIONS = [
@@ -58,7 +59,8 @@ export const PERMISSIONS = [
   Permission.PROFILE_UPDATE,
   Permission.ADMIN_MANAGE_USERS,
   Permission.ADMIN_MANAGE_ROLES,
-  Permission.ADMIN_VIEW_ANALYTICS
+  Permission.ADMIN_VIEW_ANALYTICS,
+  Permission.ADMIN_BAN_USERS
 ];
 
 export const ROLE_PERMISSIONS_MAP: Record<UserRole, Permission[]> = {
@@ -119,7 +121,8 @@ export const ROLE_PERMISSIONS_MAP: Record<UserRole, Permission[]> = {
     Permission.PROFILE_UPDATE,
     Permission.ADMIN_MANAGE_USERS,
     Permission.ADMIN_MANAGE_ROLES,
-    Permission.ADMIN_VIEW_ANALYTICS
+    Permission.ADMIN_VIEW_ANALYTICS,
+    Permission.ADMIN_BAN_USERS
   ]
 };
 
