@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.5.0 (2025-08-26)
+
+
+### Features
+
+* add ADMIN_BAN_USERS permission and update permissions list ([#8](https://github.com/sociable-tech/adj-types/issues/8)) ([4806d81](https://github.com/sociable-tech/adj-types/commit/4806d81cdb93054a56d67e11293203ebb60f0a4d))
+
 ## 1.4.0 (2025-08-25)
 
 
