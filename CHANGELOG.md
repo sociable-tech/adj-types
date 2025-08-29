@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.7.0 (2025-08-29)
+
+
+### Features
+
+* add GOODS_PROVIDER qualification type and update disqualifier types ([#9](https://github.com/sociable-tech/adj-types/issues/9)) ([91ff9f3](https://github.com/sociable-tech/adj-types/commit/91ff9f30c0cb544f5e5ab41ccc240ec2128ed9aa))
+
 ### 1.6.2 (2025-08-28)
 
 ### 1.6.1 (2025-08-26)
