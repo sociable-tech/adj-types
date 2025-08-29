@@ -47,8 +47,7 @@ export enum QualificationType {
 export enum DisqualifierType {
   FINANCIAL_CONTRACT = 'Financial Contract',
   FINANCIAL_INSTITUTION_CONTRACT = 'Financial Institution Contract',
-    OUTSIDE_NSW_JURISDICTION = 'Outside NSW Jurisdiction',
-  GOODS_PROVIDER = 'Goods Provider' 
+  OUTSIDE_NSW_JURISDICTION = 'Outside NSW Jurisdiction',
 }
 
 export enum EligibilityStatus {

@@ -16,6 +16,10 @@ export const RESPONSE_MESSAGES = {
     [QualificationType.BUILDER]: {
       description: 'Provides construction labour per s.6(1)(b)',
       recommendation: RECOMMENDATIONS.QUALIFICATION
+    },
+    [QualificationType.GOODS_PROVIDER]: {
+      description: 'Provides goods for construction work',
+      recommendation: RECOMMENDATIONS.QUALIFICATION
     }
   },
   DISQUALIFIERS: {
@@ -30,10 +34,6 @@ export const RESPONSE_MESSAGES = {
     [DisqualifierType.OUTSIDE_NSW_JURISDICTION]: {
       description: 'Construction work falls outside NSW jurisdiction',
       recommendation: RECOMMENDATIONS.DISQUALIFICATION
-    },
-    [DisqualifierType.GOODS_PROVIDER]: { 
-      description: 'Provides materials or components for construction work',
-      recommendation: RECOMMENDATIONS.DISQUALIFICATION
-    },
+    }
   }
 } as const;
