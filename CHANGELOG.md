@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.8.0 (2025-09-01)
+
+
+### Features
+
+* enhance permissions and roles management with new permissions and utility functions ([#10](https://github.com/sociable-tech/adj-types/issues/10)) ([1dfc8dd](https://github.com/sociable-tech/adj-types/commit/1dfc8dd072bdbf665eb9f497ff0960d27706988f))
+
 ## 1.7.0 (2025-08-29)
 
 
