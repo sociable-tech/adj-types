@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.9.2 (2025-09-02)
+
+
+### Bug Fixes
+
+* update dependantAnswer for comprehensive SOPA NSW eligibility questionnaire ([78aece4](https://github.com/sociable-tech/adj-types/commit/78aece4abf8f6853e98855ff7cf828fc7a6b9bfb))
+
 ### 1.9.1 (2025-09-02)
 
 
