@@ -336,7 +336,7 @@ export const sopanswQuestionnaireComprehensive: Questionnaire = {
       key: "scope_s6",
       parent: "Q6",
       section: "Goods and Services",
-      dependantAnswer: null,
+      dependantAnswer: "Yes",
       type: "multiple-choice",
       options: ["Yes", "No"]
     },
