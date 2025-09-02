@@ -39,15 +39,21 @@ export type QuestionnaireResponse = {
 
 // Enums for qualification and evaluation
 export enum QualificationType {
-  GOODS_PROVIDER = 'Goods Provider',
-  SERVICE_PROVIDER_CONSULTANT = 'Service Provider/Consultant',
-  BUILDER = 'Builder'
+  BUILDER = 'Builder',
+  HEAD_CONTRACTOR = 'HEAD_CONTRACTOR',
+  GOODS_PROVIDER_MATERIALS = 'GOODS_PROVIDER_MATERIALS',
+  GOODS_PROVIDER_PLANT = 'GOODS_PROVIDER_PLANT',
+  SERVICE_PROVIDER_PROFESSIONAL = 'SERVICE_PROVIDER_PROFESSIONAL',
+  SERVICE_PROVIDER_LABOUR = 'SERVICE_PROVIDER_LABOUR'
 }
 
 export enum DisqualifierType {
   FINANCIAL_CONTRACT = 'Financial Contract',
   FINANCIAL_INSTITUTION_CONTRACT = 'Financial Institution Contract',
   OUTSIDE_NSW_JURISDICTION = 'Outside NSW Jurisdiction',
+  NOT_CONSTRUCTION_RELATED = 'NOT_CONSTRUCTION_RELATED',
+  S5_EXCLUSION = 'S5_EXCLUSION',
+  EMPLOYEE_STATUS = 'EMPLOYEE_STATUS'
 }
 
 export enum EligibilityStatus {

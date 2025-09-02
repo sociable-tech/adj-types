@@ -9,16 +9,29 @@ export const RECOMMENDATIONS = {
 // Response messages
 export const RESPONSE_MESSAGES = {
   QUALIFICATIONS: {
-    [QualificationType.SERVICE_PROVIDER_CONSULTANT]: {
+    [QualificationType.BUILDER]: {
+      description: 'Performs construction work under Section 5 (Construction Work)',
+      recommendation: RECOMMENDATIONS.QUALIFICATION
+    },
+    // Add new qualification types
+    [QualificationType.HEAD_CONTRACTOR]: {
+    description: 'Contracts with the principal and engages subcontractors for Section 5 construction work',
+      recommendation: RECOMMENDATIONS.QUALIFICATION
+    },
+    [QualificationType.GOODS_PROVIDER_MATERIALS]: {
+      description: 'Provides materials for construction work per s.6(1)(a)(i)',
+      recommendation: RECOMMENDATIONS.QUALIFICATION
+    },
+    [QualificationType.GOODS_PROVIDER_PLANT]: {
+      description: 'Provides plant hire for construction work per s.6(1)(a)(ii)',
+      recommendation: RECOMMENDATIONS.QUALIFICATION
+    },
+    [QualificationType.SERVICE_PROVIDER_PROFESSIONAL]: {
       description: 'Provides professional services for construction per s.6(1)(b)',
       recommendation: RECOMMENDATIONS.QUALIFICATION
     },
-    [QualificationType.BUILDER]: {
-      description: 'Provides construction labour per s.6(1)(b)',
-      recommendation: RECOMMENDATIONS.QUALIFICATION
-    },
-    [QualificationType.GOODS_PROVIDER]: {
-      description: 'Provides goods for construction work',
+    [QualificationType.SERVICE_PROVIDER_LABOUR]: {
+      description: 'Provides labour hire for construction work per s.6(1)(b)(i)',
       recommendation: RECOMMENDATIONS.QUALIFICATION
     }
   },
@@ -33,6 +46,19 @@ export const RESPONSE_MESSAGES = {
     },
     [DisqualifierType.OUTSIDE_NSW_JURISDICTION]: {
       description: 'Construction work falls outside NSW jurisdiction',
+      recommendation: RECOMMENDATIONS.DISQUALIFICATION
+    },
+    // Add new disqualifier types
+    [DisqualifierType.NOT_CONSTRUCTION_RELATED]: {
+      description: 'Contract is not related to construction work',
+      recommendation: RECOMMENDATIONS.DISQUALIFICATION
+    },
+    [DisqualifierType.S5_EXCLUSION]: {
+      description: 'Contract falls under explicit exclusions in s.5(2) SOPA NSW',
+      recommendation: RECOMMENDATIONS.DISQUALIFICATION
+    },
+    [DisqualifierType.EMPLOYEE_STATUS]: {
+      description: 'Acting as an employee under Industrial Relations Act 1996',
       recommendation: RECOMMENDATIONS.DISQUALIFICATION
     }
   }

@@ -205,3 +205,264 @@ export const sopanswQuestionnaire: Questionnaire = {
     isActive: true,
     isPublic: true
 };
+
+// Comprehensive version of the SOPA NSW questionnaire with detailed analysis and role assignment
+export const sopanswQuestionnaireComprehensive: Questionnaire = {
+  id: "sopa-nsw-eligibility-comprehensive",
+  title: "SOPA NSW Contract Eligibility Questionnaire (Comprehensive)",
+  description:
+    "This questionnaire helps determine eligibility under the Security of Payment Act (SOPA) in New South Wales (NSW) and assigns the applicant to an appropriate role.",
+  questions: [
+    // Section 1: Identification
+    {
+      id: "Q1",
+      text: "What is the person or organisation name (as per contract)?",
+      key: "contract_party_name",
+      parent: null,
+      section: "Identification",
+      dependantAnswer: null,
+      type: "text",
+      options: null
+    },
+    {
+      id: "Q2",
+      text: "(Optional) Please provide your ABN (Australian Business Number) or ACN (Australian Company Number), if applicable.",
+      key: "abn_acn",
+      parent: "Q1",
+      section: "Identification",
+      dependantAnswer: null,
+      type: "text",
+      options: null
+    },
+
+    // Section 2: Contract Nature
+    {
+      id: "Q3",
+      text: "Is the contract financial in nature? (s.7(2) SOPA NSW)",
+      key: "financial_contract",
+      parent: null,
+      section: "Contract Nature",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q4",
+      text: "If yes, which of the following apply?",
+      key: "financial_options",
+      parent: "Q3",
+      section: "Contract Nature",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: [
+        "Lending or repaying a loan",
+        "Guaranteeing payment of money owed",
+        "Repaying money lent",
+        "Providing indemnity regarding construction work"
+      ]
+    },
+    {
+      id: "Q5",
+      text: "Is the contract tied to a recognised financial institution (loan-conditioned construction, s.7(3) SOPA NSW)?",
+      key: "financial_institution",
+      parent: "Q3",
+      section: "Contract Nature",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+
+    // Section 3: Jurisdiction
+    {
+      id: "Q6",
+      text: "Is the contract related to construction work?",
+      key: "construction_related",
+      parent: null,
+      section: "Jurisdiction",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q7",
+      text: "Is the construction work being carried out in New South Wales (NSW)? (s.7(4) SOPA NSW)",
+      key: "nsw_construction",
+      parent: "Q6",
+      section: "Jurisdiction",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+
+    // Section 4: Construction Work (s.5)
+    {
+      id: "Q8",
+      text: "Which of the following best describes the construction work involved? (s.5(1) SOPA NSW)",
+      key: "construction_scope",
+      parent: "Q7",
+      section: "Construction Work",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: [
+        "Building, alteration, repair, restoration, demolition (s.5(1)(a))",
+        "Infrastructure (roads, pipelines, runways, docks, railways, etc.) (s.5(1)(b))",
+        "Installations (heating, ventilation, fire, safety, power, comms) (s.5(1)(c))",
+        "Cleaning during construction (s.5(1)(d))",
+        "Preparatory work (site clearance, foundations, scaffolding, prefabrication, landscaping) (s.5(1)(e))",
+        "Painting or decorating (s.5(1)(f))",
+        "Other prescribed work (s.5(1)(g))"
+      ]
+    },
+    {
+      id: "Q9",
+      text: "Does the contract fall under explicit exclusions (s.5(2) SOPA NSW)?",
+      key: "construction_exclusions",
+      parent: "Q8",
+      section: "Construction Work",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: [
+        "Drilling for or excavation of oil or natural gas (s.5(2)(a))",
+        "Extraction of minerals or tunnelling/boring for that purpose (s.5(2)(b))",
+        "Other prescribed exclusions (s.5(2)(c))",
+        "No exclusions apply"
+      ]
+    },
+
+    // Section 5: Goods and Services (s.6)
+    {
+      id: "Q10",
+      text: "Does the scope of work involve the provision of goods or services as outlined by s.6 SOPA NSW?",
+      key: "scope_s6",
+      parent: "Q6",
+      section: "Goods and Services",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q11",
+      text: "What category best describes what you provide?",
+      key: "provider_category",
+      parent: "Q10",
+      section: "Goods and Services",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Goods Provider", "Service Provider", "Other"]
+    },
+    {
+      id: "Q12",
+      text: "Do you provide materials or components to form part of any building, structure, or work? (s.6(1)(a)(i))",
+      key: "goods_materials",
+      parent: "Q11",
+      section: "Goods Provider Specifics",
+      dependantAnswer: "Goods Provider",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q13",
+      text: "Do you provide plant or materials by sale or hire for construction? (s.6(1)(a)(ii))",
+      key: "goods_plants",
+      parent: "Q11",
+      section: "Goods Provider Specifics",
+      dependantAnswer: "Goods Provider",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q14",
+      text: "Do you provide architectural, design, surveying, or quantity surveying services? (s.6(1)(b)(ii))",
+      key: "services_design",
+      parent: "Q11",
+      section: "Service Provider Specifics",
+      dependantAnswer: "Service Provider",
+      type: "multiple-choice",
+      options: [
+        "Architectural services",
+        "Design services",
+        "Surveying services",
+        "Quantity surveying services"
+      ]
+    },
+    {
+      id: "Q15",
+      text: "Do you provide building, engineering, interior/exterior decoration, or landscape advisory services? (s.6(1)(b)(iii))",
+      key: "services_engineering",
+      parent: "Q11",
+      section: "Service Provider Specifics",
+      dependantAnswer: "Service Provider",
+      type: "multiple-choice",
+      options: [
+        "Building services",
+        "Engineering services",
+        "Interior decoration",
+        "Exterior decoration",
+        "Landscape advisory services"
+      ]
+    },
+    {
+      id: "Q16",
+      text: "Do you provide labour to carry out construction work? (s.6(1)(b)(i))",
+      key: "labour_provider",
+      parent: "Q11",
+      section: "Service Provider Specifics",
+      dependantAnswer: "Service Provider",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+
+    // Section 6: Entity Classification (explicit + factual)
+    {
+      id: "Q17a",
+      text: "Do you contract directly with the principal/owner?",
+      key: "contracts_with_principal",
+      parent: "Q6",
+      section: "Entity Classification",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q17b",
+      text: "Do you engage subcontractors for part(s) of the work?",
+      key: "engages_subcontractors",
+      parent: "Q6",
+      section: "Entity Classification",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+
+    // Section 7: Confirmation
+    {
+      id: "Q18",
+      text: "Are you acting as an employee under the Industrial Relations Act 1996 (s.7(3) SOPA NSW)?",
+      key: "employee_status",
+      parent: null,
+      section: "Confirmation",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q19",
+      text: "(Optional) Please provide any additional notes or clarifications about your contract or scope of work.",
+      key: "additional_notes",
+      parent: "Q18",
+      section: "Confirmation",
+      dependantAnswer: null,
+      type: "text",
+      options: null
+    }
+  ],
+  createdAt: new Date("2025-09-02T12:00:00Z"),
+  updatedAt: new Date("2025-09-02T12:00:00Z"),
+  country: "Australia",
+  state: "NSW",
+  jurisdiction: "SOPA NSW",
+  tags: ["eligibility", "construction", "contract", "sopa", "nsw", "enhanced"],
+  version: "2.0.0",
+  isActive: true,
+  isPublic: true
+};
