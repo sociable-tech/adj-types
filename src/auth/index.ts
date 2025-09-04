@@ -17,6 +17,19 @@ import { User } from "../user";
     role: string;
   }
   
+  export type SigninSuccess = {
+  data: {
+    user: User;
+    session: {
+      accessToken: string;
+      refreshToken: string;
+      tokenType: string;
+      expiresIn: number;
+      expiresAt: string;
+    };
+  };
+};
+
   export interface ResetPasswordRequest {
     email: string;
     code: string;

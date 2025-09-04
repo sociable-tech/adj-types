@@ -23,6 +23,17 @@ export type Questionnaire = {
     updatedAt: Date;
 };
 
+export type Question = {
+    id: string
+    text: string
+    key: string
+    parent: string | null
+    section: string | null
+    dependantAnswer: string | null
+    type: "text" | "multiple-choice"
+    options: string[] | null
+}
+
 // Response Type (using hashmap & normalized data)
 export type QuestionnaireResponse = {
     questionnaireId: string;
