@@ -103,6 +103,7 @@ export interface ParserResponse {
   ticket: string;
   status: "pending" | "completed" | "error";
   eligible: boolean;
+  score: number;
   qualifications: Record<QualificationType, { description: string; recommendation: string }>;
   disqualifiers: Record<DisqualifierType, { description: string; recommendation: string }>;
 }
