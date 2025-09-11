@@ -18,4 +18,6 @@ export interface User {
   email: string;
   role?: UserRole;
   accessToken?: string;
+  user_metadata?: Record<string, unknown>;
 }
+
