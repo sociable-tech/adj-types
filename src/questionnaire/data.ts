@@ -466,3 +466,329 @@ export const sopanswQuestionnaireComprehensive: Questionnaire = {
   isActive: true,
   isPublic: true
 };
+
+export const sopanswPhase2Questionnaire: Questionnaire = {
+  id: "sopa-nsw-phase-2",
+  title: "Phase 2 - Payment Claim Validation (SOPA NSW)",
+  description: "Checks all SOPA NSW s.8-s.13 requirements for Builders, Contractors, and Head Contractors before a payment claim proceeds.",
+  questions: [
+       // A. Role Path Identification
+        {
+          id: "R1",
+          text: "Which role do you occupy under this contract?",
+          key: "role",
+          parent: null,
+          section: "Role",
+          dependantAnswer: null,
+          type: "multiple-choice",
+          options: ["Builder", "Contractor", "Head Contractor"]
+        },
+
+        // --- BUILDER path prerequisites ---
+        {
+          id: "B1",
+          text: "Provide your ABN/ACN for licensing cross-reference.",
+          key: "abn_acn",
+          parent: "R1",
+          section: "Builder Prerequisites",
+          dependantAnswer: "Builder",
+          type: "text",
+          options: null
+        },
+        {
+          id: "B2",
+          text: "Provide your NSW building licence number (or upload credential evidence).",
+          key: "builder_licence",
+          parent: "R1",
+          section: "Builder Prerequisites",
+          dependantAnswer: "Builder",
+          type: "file-or-text",
+          options: null
+        },
+        {
+          id: "B3",
+          text: "Is the building contract compliant with the Home Building Act 1989 s.4 (licensed contracting)?",
+          key: "hba_s4_compliance",
+          parent: "R1",
+          section: "Builder Prerequisites",
+          dependantAnswer: "Builder",
+          type: "multiple-choice",
+          options: ["Yes", "No", "Unsure"]
+        },
+        {
+          id: "B4",
+          text: "Is the work residential building work?",
+          key: "is_residential",
+          parent: "R1",
+          section: "Builder Prerequisites",
+          dependantAnswer: "Builder",
+          type: "multiple-choice",
+          options: ["Yes", "No"]
+        },
+        {
+          id: "B5",
+          text: "If residential, upload evidence of s.92 insurance (HBCF policy/certificate).",
+          key: "hba_s92_insurance",
+          parent: "B4",
+          section: "Builder Prerequisites",
+          dependantAnswer: "Yes",
+          type: "file-upload",
+          options: null
+        },
+        {
+          id: "B6",
+          text: "Confirm you satisfy SOPA s.8(2): a reference date exists for progress payment.",
+          key: "s8_2_reference_date",
+          parent: "R1",
+          section: "Builder Prerequisites",
+          dependantAnswer: "Builder",
+          type: "multiple-choice",
+          options: ["Yes", "No", "Unsure"]
+        },
+
+        // --- HEAD CONTRACTOR Supporting Statement ---
+        {
+          id: "HC1",
+          text: "Upload your Supporting Statement (approved form) that relates to this claim (s.13(7) & (9)).",
+          key: "supporting_statement_file",
+          parent: "R1",
+          section: "Supporting Statement",
+          dependantAnswer: "Head Contractor",
+          type: "file-upload",
+          options: null
+        },
+        {
+          id: "HC2",
+          text: "Declaration: I confirm the Supporting Statement is true and subcontractors have been paid all amounts due.",
+          key: "ss_truth_declaration",
+          parent: "HC1",
+          section: "Supporting Statement",
+          dependantAnswer: null,
+          type: "multiple-choice",
+          options: ["I acknowledge and declare"]
+        },
+
+        // --- COMMON Payment Claim (add served + upload) ---
+        {
+          id: "C0",
+          text: "Have you served a payment claim under this contract?",
+          key: "payment_claim_served",
+          parent: null,
+          section: "Payment Claim",
+          dependantAnswer: null,
+          type: "multiple-choice",
+          options: ["Yes", "No"]
+        },
+        {
+          id: "C1a",
+          text: "Upload the payment claim you served (PDF or image).",
+          key: "payment_claim_file",
+          parent: "C0",
+          section: "Payment Claim",
+          dependantAnswer: "Yes",
+          type: "file-upload",
+          options: null
+        },
+
+        // (Make the existing particulars depend on 'served = Yes' so the flow matches the diagram)
+        {
+          id: "C1",
+          text: "Identify the construction work and/or goods/services this claim covers (s.13(2)(a)).",
+          key: "claim_scope",
+          parent: "C0",
+          section: "Payment Claim",
+          dependantAnswer: "Yes",
+          type: "long-text",
+          options: null
+        },
+        {
+          id: "C2",
+          text: "Claimed amount (the amount you say is now due) (s.13(2)(b)).",
+          key: "claimed_amount",
+          parent: "C1",
+          section: "Payment Claim",
+          dependantAnswer: null,
+          type: "currency",
+          options: null
+        },
+        {
+          id: "C3",
+          text: "Basis for calculating the amount (s.9).",
+          key: "amount_basis",
+          parent: "C2",
+          section: "Payment Claim",
+          dependantAnswer: null,
+          type: "multiple-choice",
+          options: ["Per contract terms", "Value of work/goods/services provided"]
+        },
+        {
+          id: "C4",
+          text: "Upload or provide supporting calculations (progress valuation, retention, etc.).",
+          key: "calculation_support",
+          parent: "C3",
+          section: "Payment Claim",
+          dependantAnswer: null,
+          type: "file-or-text",
+          options: null
+        },
+        {
+          id: "C5",
+          text: "Does the claim include any s.13(3) amounts (e.g., suspension costs, retention)?",
+          key: "includes_s13_3",
+          parent: "C3",
+          section: "Payment Claim",
+          dependantAnswer: null,
+          type: "multiple-choice",
+          options: ["Yes", "No"]
+        },
+        {
+          id: "C5a",
+          text: "If yes, describe the s.13(3) amounts included.",
+          key: "s13_3_details",
+          parent: "C5",
+          section: "Payment Claim",
+          dependantAnswer: "Yes",
+          type: "long-text",
+          options: null
+        },
+
+        // --- Timing & Service ---
+        {
+          id: "T1",
+          text: "Claim service date.",
+          key: "claim_service_date",
+          parent: "C0",
+          section: "Timing & Service",
+          dependantAnswer: "Yes",
+          type: "date",
+          options: null
+        },
+        {
+          id: "T2",
+          text: "Did the contract specify an earlier 'named month' reference date (s.13(1B))?",
+          key: "earlier_named_month",
+          parent: "T1",
+          section: "Timing & Service",
+          dependantAnswer: null,
+          type: "multiple-choice",
+          options: ["Yes", "No", "Not sure"]
+        },
+        {
+          id: "T3",
+          text: "Has the contract been terminated (s.13(1C))?",
+          key: "contract_terminated",
+          parent: "T1",
+          section: "Timing & Service",
+          dependantAnswer: null,
+          type: "multiple-choice",
+          options: ["Yes", "No"]
+        },
+        {
+          id: "T3a",
+          text: "If terminated, termination date.",
+          key: "termination_date",
+          parent: "T3",
+          section: "Timing & Service",
+          dependantAnswer: "Yes",
+          type: "date",
+          options: null
+        },
+        {
+          id: "T4",
+          text: "Is this the only payment claim in the named month (s.13(5))?",
+          key: "single_claim_month",
+          parent: "T1",
+          section: "Timing & Service",
+          dependantAnswer: null,
+          type: "multiple-choice",
+          options: ["Yes", "No"]
+        },
+        {
+          id: "T4a",
+          text: "If no, select the permitted exception (s.13(6)).",
+          key: "multi_claim_exception",
+          parent: "T4",
+          section: "Timing & Service",
+          dependantAnswer: "No",
+          type: "multiple-choice",
+          options: [
+            "One claim covering more than one progress payment",
+            "Including an amount previously claimed",
+            "Claim for previous month's work"
+          ]
+        },
+        {
+          id: "T5",
+          text: "How was the claim served (method & recipient)?",
+          key: "service_method",
+          parent: "T1",
+          section: "Timing & Service",
+          dependantAnswer: null,
+          type: "text",
+          options: null
+        },
+
+        // --- Payment Schedule (add upload) ---
+        {
+          id: "PS1",
+          text: "Has the respondent served a Payment Schedule?",
+          key: "payment_schedule_received",
+          parent: "C0",
+          section: "Payment Schedule",
+          dependantAnswer: "Yes",
+          type: "multiple-choice",
+          options: ["Yes", "No"]
+        },
+        {
+          id: "PS2",
+          text: "Upload the Payment Schedule you received.",
+          key: "payment_schedule_file",
+          parent: "PS1",
+          section: "Payment Schedule",
+          dependantAnswer: "Yes",
+          type: "file-upload",
+          options: null
+        },
+        {
+          id: "PS2a",
+          text: "Provide schedule details (date, scheduled amount, reasons).",
+          key: "payment_schedule_details",
+          parent: "PS1",
+          section: "Payment Schedule",
+          dependantAnswer: "Yes",
+          type: "long-text",
+          options: null
+        },
+
+        // --- Adjudication Notice branch when no schedule ---
+        {
+          id: "N1",
+          text: "If the payment schedule was absent or non-compliant, have you issued a Notice of Intention to apply for adjudication?",
+          key: "adjudication_notice_given",
+          parent: "PS1",
+          section: "Adjudication Notice",
+          dependantAnswer: "No",
+          type: "multiple-choice",
+          options: ["Yes", "No"]
+        },
+        {
+          id: "N2",
+          text: "If yes, when was the notice given?",
+          key: "notice_date",
+          parent: "N1",
+          section: "Adjudication Notice",
+          dependantAnswer: "Yes",
+          type: "date",
+          options: null
+        }
+  ],
+  createdAt: new Date("2025-09-11T12:00:00Z"),
+  updatedAt: new Date("2025-09-11T12:00:00Z"),
+  country: "Australia",
+  state: "NSW",
+  jurisdiction: "SOPA NSW",
+  tags: ["eligibility", "construction", "contract", "sopa", "nsw", "enhanced"],
+  version: "1.0.0",
+  isActive: true,
+  isPublic: true
+};
