@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.11.0 (2025-09-12)
+
+
+### Features
+
+* add Phase 2 enums and response messages to questionnaire module ([866b996](https://github.com/sociable-tech/adj-types/commit/866b996141495a97079da13e0e829b0d47f2041c))
+
 ### 1.10.1 (2025-09-11)
 
 ## 1.10.0 (2025-09-11)
