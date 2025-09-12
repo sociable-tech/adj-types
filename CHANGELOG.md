@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.12.0 (2025-09-12)
+
+
+### Features
+
+* export additional interfaces and types in Phase 2 questionnaire module ([3fe2705](https://github.com/sociable-tech/adj-types/commit/3fe2705e54f916ff91c9167e0408c4f7457b8a22))
+
 ## 1.11.0 (2025-09-12)
 
 
