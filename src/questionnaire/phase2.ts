@@ -272,7 +272,7 @@ export interface Phase2ParserResponse {
   nextPhase?: string | null;
 }
 
-interface QualificationEntry {
+export interface QualificationEntry {
   message: string;
   requirement: string;
   type?: string;
@@ -280,12 +280,12 @@ interface QualificationEntry {
   status?: string;
 }
 
-interface DisqualifierEntry {
+export interface DisqualifierEntry {
   message: string;
   severity: 'critical' | 'warning';
 }
 
-interface Phase2PathEvaluationResult {
+export interface Phase2PathEvaluationResult {
   pathId: string;
   pathName: string;
   eligible: boolean;
@@ -295,9 +295,9 @@ interface Phase2PathEvaluationResult {
   nextPhase: string;
 }
 
-type ValidationDisqualifiers = Record<string, DisqualifierEntry>;
+export type ValidationDisqualifiers = Record<string, DisqualifierEntry>;
 
-enum Phase2QuestionId {
+export enum Phase2QuestionId {
   // Role selection
   ROLE_SELECTION = 'R1',
   
