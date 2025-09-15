@@ -30,7 +30,7 @@ export type Question = {
     parent: string | null
     section: string | null
     dependantAnswer: string | null
-    type: "text" | "multiple-choice"
+       type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date";
     options: string[] | null
 }
 
