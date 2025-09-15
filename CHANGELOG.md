@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.13.0 (2025-09-15)
+
+
+### Features
+
+* add recommendations field to ParserResponse interface ([5109a55](https://github.com/sociable-tech/adj-types/commit/5109a55a5660c67616559893256c88f433c961fd))
+
 ### 1.12.2 (2025-09-15)
 
 ### 1.12.1 (2025-09-15)
