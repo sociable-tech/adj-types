@@ -19,5 +19,6 @@ export interface User {
   role?: UserRole;
   accessToken?: string;
   user_metadata?: Record<string, unknown>;
+  email_confirmed_at?: string;
 }
 
