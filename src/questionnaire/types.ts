@@ -104,7 +104,7 @@ export interface ParserResponse {
   status: "pending" | "completed" | "error";
   eligible: boolean;
   score: number;
-  recommendations: string;
+  recommendation: string;
   qualifications: Record<QualificationType, { description: string; recommendation: string }>;
   disqualifiers: Record<DisqualifierType, { description: string; recommendation: string }>;
 }
