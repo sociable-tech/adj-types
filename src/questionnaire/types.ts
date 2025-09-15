@@ -105,8 +105,8 @@ export interface ParserResponse {
   eligible: boolean;
   score: number;
   recommendation: string;
-  qualifications: Record<QualificationType, { description: string; recommendation: string }>;
-  disqualifiers: Record<DisqualifierType, { description: string; recommendation: string }>;
+  qualifications: Record<QualificationType, { description: string; recommendation: string; score: number }>;
+  disqualifiers: Record<DisqualifierType, { description: string; recommendation: string ; score: number }>;
 }
 
 export enum Phase2Qualification {
