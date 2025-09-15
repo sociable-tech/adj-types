@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.13.2 (2025-09-15)
+
+
+### Bug Fixes
+
+* add score field to qualifications and disqualifiers in ParserResponse interface ([aabadc3](https://github.com/sociable-tech/adj-types/commit/aabadc3dce6f1d049aa8579f5ac8a6624ec688dc))
+
 ### 1.13.1 (2025-09-15)
 
 
