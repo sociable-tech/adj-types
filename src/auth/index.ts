@@ -1,4 +1,4 @@
-import { User } from "../user";
+import { User } from "../user/index.ts";
   
   export interface AuthResponse {
     data: User;

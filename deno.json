@@ -1,0 +1,19 @@
+{
+  "name": "@adjudication/types",
+  "version": "1.13.2",
+  "license": "MIT",
+  "exports": {
+    "./": "./src/index.ts"
+  },
+  "tasks": {
+    "build:deno": "echo 'Deno source ready in src/'",
+    "build:npm": "deno run --allow-all --reload scripts/build_npm.ts",
+    "publish:jsr": "deno publish",
+    "publish:npm": "cd npm && npm publish"
+  },
+  "npm_outDir": "./npm",
+  "compilerOptions": {
+    "lib": ["deno.unstable"],
+    "strict": true
+  }
+}
