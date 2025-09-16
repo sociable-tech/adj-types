@@ -1,4 +1,4 @@
-import { UserRole, USER_ROLES } from "../user";
+import { UserRole, USER_ROLES } from "../user/index.ts";
 
 export enum Permission {
   // Claims permissions

@@ -1,0 +1,16 @@
+{
+  "name": "@adjudication/types",
+  "version": "1.13.2",
+  "license": "MIT",
+  "exports": {
+    "./user": "./src/user/index.ts",
+    "./auth": "./src/auth/index.ts",
+    "./permissions": "./src/permissions/index.ts",
+    "./questionnaire": "./src/questionnaire/index.ts",
+    "./form-validation": "./src/form-validation/index.ts"
+  },
+  "compilerOptions": {
+    "lib": ["deno.unstable"],
+    "strict": true
+  }
+}

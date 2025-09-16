@@ -1,4 +1,4 @@
-import { Questionnaire, QuestionnaireResponse } from './types';
+import { Questionnaire } from './types.ts';
 
 // This is a questionnaire for the NSW SOPA Act.
 export const sopanswQuestionnaire: Questionnaire = {
