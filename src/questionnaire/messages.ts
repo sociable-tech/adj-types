@@ -1,4 +1,4 @@
-import { QualificationType, DisqualifierType } from './types';
+import { QualificationType, DisqualifierType } from './types.ts';
 
 // Consistent recommendation messages
 export const RECOMMENDATIONS = {

@@ -1,51 +1,51 @@
 export type Questionnaire = {
+  id: string;
+  title: string;
+  description: string | null;
+  country: string; // e.g., "Australia"
+  state: string | null; // e.g., "NSW"
+  jurisdiction: string | null; // e.g., "SOPA NSW"
+  tags: string[]; // e.g., ["eligibility", "construction", "contract"]
+  version: string; // e.g., "1.0.0"
+  isActive: boolean; // Indicates if the questionnaire is currently active
+  isPublic: boolean; // Indicates if the questionnaire is publicly accessible
+  questions: {
     id: string;
-    title: string;
-    description: string | null;
-    country: string; // e.g., "Australia"
-    state: string | null; // e.g., "NSW"
-    jurisdiction: string | null; // e.g., "SOPA NSW"
-    tags: string[]; // e.g., ["eligibility", "construction", "contract"]
-    version: string; // e.g., "1.0.0"
-    isActive: boolean; // Indicates if the questionnaire is currently active
-    isPublic: boolean; // Indicates if the questionnaire is publicly accessible
-    questions: {
-        id: string;
-        section: string | null; // Optional section for grouping questions
-        text: string;
-        key: string;
-        parent: string | null; // ID of the parent question, if any
-        dependantAnswer: string | null; // The answer that triggers this question, if applicable
-        type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date";
-        options: string[] | null; // Only for multiple-choice questions
-    }[];
-    createdAt: Date;
-    updatedAt: Date;
+    section: string | null; // Optional section for grouping questions
+    text: string;
+    key: string;
+    parent: string | null; // ID of the parent question, if any
+    dependantAnswer: string | null; // The answer that triggers this question, if applicable
+    type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date";
+    options: string[] | null; // Only for multiple-choice questions
+  }[];
+  createdAt: Date;
+  updatedAt: Date;
 };
 
 export type Question = {
-    id: string
-    text: string
-    key: string
-    parent: string | null
-    section: string | null
-    dependantAnswer: string | null
-       type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date";
-    options: string[] | null
+  id: string
+  text: string
+  key: string
+  parent: string | null
+  section: string | null
+  dependantAnswer: string | null
+  type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date";
+  options: string[] | null
 }
 
 // Response Type (using hashmap & normalized data)
 export type QuestionnaireResponse = {
-    questionnaireId: string;
-    userId: string; // anonymous responses can have ip+uniqueId instead of userId
-    responses: Record<
-        string, // questionId or key
-        {
-            key: string; // question key
-            answer: string | string[];
-        }
-    >;
-    submittedAt: Date;
+  questionnaireId: string;
+  userId: string; // anonymous responses can have ip+uniqueId instead of userId
+  responses: Record<
+    string, // questionId or key
+    {
+      key: string; // question key
+      answer: string | string[];
+    }
+  >;
+  submittedAt: Date;
 };
 
 // Enums for qualification and evaluation
@@ -106,7 +106,7 @@ export interface ParserResponse {
   score: number;
   recommendation: string;
   qualifications: Record<QualificationType, { description: string; recommendation: string; score: number }>;
-  disqualifiers: Record<DisqualifierType, { description: string; recommendation: string ; score: number }>;
+  disqualifiers: Record<DisqualifierType, { description: string; recommendation: string; score: number }>;
 }
 
 export enum Phase2Qualification {
@@ -116,33 +116,33 @@ export enum Phase2Qualification {
   BUILDER_HBA_S4_COMPLIANT = 'BUILDER_HBA_S4_COMPLIANT',
   BUILDER_HBA_S92_INSURANCE = 'BUILDER_HBA_S92_INSURANCE',
   BUILDER_S8_2_REFERENCE_DATE = 'BUILDER_S8_2_REFERENCE_DATE',
-  
+
   // Head Contractor specific
   HEAD_CONTRACTOR_SS_PROVIDED = 'HEAD_CONTRACTOR_SS_PROVIDED',
   HEAD_CONTRACTOR_SS_DECLARATION = 'HEAD_CONTRACTOR_SS_DECLARATION',
-  
+
   // Payment Claim specific
   CLAIM_SCOPE_IDENTIFIED = 'CLAIM_SCOPE_IDENTIFIED',
   CLAIM_AMOUNT_VALID = 'CLAIM_AMOUNT_VALID',
   CLAIM_BASIS_PROVIDED = 'CLAIM_BASIS_PROVIDED',
   CLAIM_S13_3_DETAILED = 'CLAIM_S13_3_DETAILED',
   CLAIM_FILE_UPLOADED = 'CLAIM_FILE_UPLOADED',
-  
+
   // Payment Schedule specific
   PAYMENT_SCHEDULE_UPLOADED = 'PAYMENT_SCHEDULE_UPLOADED',
   PAYMENT_SCHEDULE_DETAILS_PROVIDED = 'PAYMENT_SCHEDULE_DETAILS_PROVIDED',
   NOTICE_OF_ADJUDICATION_GIVEN = 'NOTICE_OF_ADJUDICATION_GIVEN',
-  
+
   // Timing specific
   TIMING_SERVICE_DATE_VALID = 'TIMING_SERVICE_DATE_VALID',
   TIMING_TERMINATION_DOCUMENTED = 'TIMING_TERMINATION_DOCUMENTED',
   TIMING_MULTIPLE_CLAIMS_EXCEPTION = 'TIMING_MULTIPLE_CLAIMS_EXCEPTION',
   TIMING_SINGLE_CLAIM_CONFIRMED = 'TIMING_SINGLE_CLAIM_CONFIRMED',
   TIMING_NAMED_MONTH_CLARIFIED = 'TIMING_NAMED_MONTH_CLARIFIED',
-  
+
   // Service specific
   SERVICE_METHOD_SPECIFIED = 'SERVICE_METHOD_SPECIFIED',
-  
+
   // Contractor specific
   CONTRACTOR_S6_ELIGIBLE = 'CONTRACTOR_S6_ELIGIBLE',
 }
@@ -154,27 +154,27 @@ export enum Phase2Disqualifier {
   BUILDER_HBA_S4_NON_COMPLIANT = 'BUILDER_HBA_S4_NON_COMPLIANT',
   BUILDER_HBA_S92_MISSING = 'BUILDER_HBA_S92_MISSING',
   BUILDER_S8_2_NO_REFERENCE_DATE = 'BUILDER_S8_2_NO_REFERENCE_DATE',
-  
+
   // Head Contractor specific
   HEAD_CONTRACTOR_SS_MISSING = 'HEAD_CONTRACTOR_SS_MISSING',
   HEAD_CONTRACTOR_SS_DECLARATION_MISSING = 'HEAD_CONTRACTOR_SS_DECLARATION_MISSING',
-  
+
   // Payment Claim specific
   CLAIM_SCOPE_MISSING = 'CLAIM_SCOPE_MISSING',
   CLAIM_AMOUNT_INVALID = 'CLAIM_AMOUNT_INVALID',
   CLAIM_BASIS_MISSING = 'CLAIM_BASIS_MISSING',
   CLAIM_S13_3_INVALID = 'CLAIM_S13_3_INVALID',
   CLAIM_FILE_MISSING = 'CLAIM_FILE_MISSING',
-  
+
   // Payment Schedule specific
   PAYMENT_SCHEDULE_FILE_MISSING = 'PAYMENT_SCHEDULE_FILE_MISSING',
-  
+
   // Timing specific
   TIMING_SERVICE_DATE_MISSING = 'TIMING_SERVICE_DATE_MISSING',
   TIMING_INVALID_MULTIPLE_CLAIMS = 'TIMING_INVALID_MULTIPLE_CLAIMS',
   TIMING_TERMINATION_IMPACT = 'TIMING_TERMINATION_IMPACT',
   TIMING_NAMED_MONTH_UNCLEAR = 'TIMING_NAMED_MONTH_UNCLEAR',
-  
+
   // Service specific
   SERVICE_METHOD_INVALID = 'SERVICE_METHOD_INVALID',
 }
