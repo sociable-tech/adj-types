@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.15.0 (2025-09-22)
+
+
+### Features
+
+* add case information fields to the comprehensive SOPA NSW Phase 2 questionnaire ([3d95085](https://github.com/sociable-tech/adj-types/commit/3d950852b1a37f637dbf59d6c1f31469ab5b4883))
+
+### 1.14.1 (2025-09-18)
+
+## 1.14.0 (2025-09-16)
+
+
+### Features
+
+* add comprehensive SOPA NSW Phase 2 questionnaire with enhanced role identification and document submission options ([2ab292f](https://github.com/sociable-tech/adj-types/commit/2ab292f745a788efc426444025f6da6c7012b4db))
+
 ### 1.13.2 (2025-09-15)
 
 
