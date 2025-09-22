@@ -10,3 +10,14 @@ tsconfig.json
 .env
 coverage/
 *.log
+
+# .npmignore
+src/
+scripts/
+deno.json
+deno.lock
+import_map.json
+tsconfig.deno.json
+*.log
+.vscode/
+.DS_Store

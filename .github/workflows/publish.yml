@@ -23,19 +23,33 @@ jobs:
       - name: Install Dependencies
         run: npm ci
 
-      - name: Bump version, generate changelog, and tag
+      - name: Setup Deno
+        uses: denoland/setup-deno@v1
+        with:
+          deno-version: v2.x
+
+      - name: Bump version, generate changelog, sync deno.json, and commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           npx standard-version
+          npm run version
+          npm run postversion
+          git add deno.json
+          git commit -m "chore: sync deno.json with package.json" || echo "No changes to commit"
 
-      - name: Build Package
-        run: npm run build
+      - name: Build Deno Package
+        run: deno run --allow-read --allow-write ./scripts/build_deno.ts
 
       - name: Publish to NPM
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Publish to JSR
+        run: deno publish
+        env:
+          DENO_AUTH_TOKEN: ${{ secrets.DENO_AUTH_TOKEN }}
 
       - name: Push Changes
         run: git push --follow-tags origin main
