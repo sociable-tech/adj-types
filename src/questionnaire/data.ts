@@ -809,6 +809,28 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
           type: "multiple-choice",
           options: ["Builder", "Contractor", "Head Contractor"]
         },
+        
+        //Case Information
+        {
+          id: "CASE1",
+          text: "Case Title (for identification purposes)",
+          key: "case_title",
+          parent: null,
+          section: "Case Information",
+          dependantAnswer: null,
+          type: "text",
+          options: null
+        },
+        {
+          id: "CASE2",
+          text: "Case Description (detailed description of your claim)",
+          key: "case_description",
+          parent: "CASE1",
+          section: "Case Information",
+          dependantAnswer: null,
+          type: "long-text",
+          options: null
+        },
 
         // --- BUILDER path prerequisites ---
         {
