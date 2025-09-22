@@ -1,6 +1,6 @@
 {
   "name": "@adjudication/types",
-  "version": "1.16.1",
+  "version": "1.16.2",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -18,10 +18,11 @@
   ],
   "scripts": {
     "build:npm": "deno run --allow-all --reload scripts/build_npm.ts",
-    "postversion": "npm run build:npm && git push --follow-tags && cd npm && npm publish --access public"
+    "postversion": "git push --follow-tags && cd npm/esm && npm publish --access public"
   },
   "dependencies": {},
   "devDependencies": {
-    "standard-version": "^9.5.0"
+    "standard-version": "^9.5.0",
+    "@adjudication/types": "^1.16.1"
   }
 }
