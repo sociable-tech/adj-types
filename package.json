@@ -1,6 +1,6 @@
 {
   "name": "@adjudication/types",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -10,7 +10,12 @@
   "description": "The project refers to the types of Adjudication package that will be published to NPM and shared between backend and frontend for reusablity and ensuring consistency.",
   "main": "mod.js",
   "types": "mod.d.ts",
-  "files": ["mod.js", "mod.d.ts", "README.md", "LICENSE"],
+  "files": [
+    "mod.js",
+    "mod.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build:npm": "deno run --allow-all --reload scripts/build_npm.ts",
     "postversion": "npm run build:npm && git push --follow-tags && npm publish"
