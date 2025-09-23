@@ -185,7 +185,7 @@ export const PHASE2_MESSAGES = {
   BUILDER: {
     ABN_ACN_REQUIRED: 'ABN (11 digits) or ACN (9 digits) is required for licensing cross-reference',
     ABN_ACN_INVALID_FORMAT: 'Invalid ABN/ACN format. ABN must be 11 digits, ACN must be 9 digits (e.g., 12345678901 or 123456789)',
-    ABN_ACN_VALID: (type: string) => `Valid ${type} provided`,
+    ABN_ACN_VALID: (type: string):string => `Valid ${type} provided`,
     LICENCE_MISSING: 'NSW building licence number or credential evidence is required',
     LICENCE_PROVIDED: 'Building licence provided',
     HBA_S4_NON_COMPLIANT: 'Building contract must be compliant with Home Building Act 1989 s.4 (licensed contracting)',

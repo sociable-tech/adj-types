@@ -23,3 +23,9 @@ export interface User {
   email_confirmed_at?: string;
 }
 
+export const NewUserTestType = [
+  UserRole.CLAIMANT,
+  UserRole.RESPONDENT,
+  UserRole.SERVICE_PROVIDER,
+  UserRole.ADMIN
+]
