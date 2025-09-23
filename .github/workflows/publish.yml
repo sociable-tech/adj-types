@@ -38,16 +38,16 @@ jobs:
           git add deno.json
           git commit -m "chore: sync deno.json with package.json" || echo "No changes to commit"
 
+      - name: Build NPM Package
+        run: npm run build:npm
+
       - name: Publish to NPM
-        run: npm publish --access public
+        run: npm publish ./npm --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to JSR
-        run: deno publish
-        env:
-          DENO_AUTH_TOKEN: ${{ secrets.DENO_AUTH_TOKEN }}
-
+        run: npx jsr publish
       - name: Push Changes
         run: git push --follow-tags origin main
         env:
