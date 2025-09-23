@@ -1,0 +1,15 @@
+{
+  "name": "@adjudication/types",
+  "version": "1.16.11",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "tasks": {
+    "dev": "deno run -A src/index.ts",
+    "test": "deno test -A"
+  },
+  "compilerOptions": {
+    "strict": true
+  },
+  "license": "MIT"
+}
