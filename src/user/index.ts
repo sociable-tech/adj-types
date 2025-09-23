@@ -23,12 +23,9 @@ export interface User {
   email_confirmed_at?: string;
 }
 
-export interface NewUserTestType {
-  first_name: string;
-  last_name: string;
-  email: string;
-  password: string;
-  role?: UserRole;
-  user_metadata?: Record<string, unknown>;
-}
-
+export const NewUserTestType = [
+  UserRole.CLAIMANT,
+  UserRole.RESPONDENT,
+  UserRole.SERVICE_PROVIDER,
+  UserRole.ADMIN
+]
