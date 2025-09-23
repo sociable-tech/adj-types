@@ -1,6 +1,6 @@
 {
   "name": "@adjudication/types",
-  "version": "1.16.10",
+  "version": "1.16.11",
   "description": "The project refers to the types of Adjudication package that will be published to NPM and shared between backend and frontend for reusablity and ensuring consistency.",
   "main": "./mod.js",
   "types": "./mod.d.ts",
@@ -26,7 +26,7 @@
     "build:npm": "deno run -A scripts/build_npm.ts $(node -p \"require('./package.json').version\") && rollup -c",
     "bump:deno": "node scripts/bump_deno.js",
     "version": "npm run bump:deno && git add deno.json",
-    "postversion": "npm run build:npm && git push --follow-tags && npm publish"
+    "postversion": "npm run build:npm && git push --follow-tags"
   },
   "license": "MIT",
   "devDependencies": {

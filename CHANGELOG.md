@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.16.11](https://github.com/sociable-tech/adj-types/compare/v1.16.10...v1.16.11) (2025-09-23)
+
 ### [1.16.10](https://github.com/sociable-tech/adj-types/compare/v1.16.9...v1.16.10) (2025-09-23)
 
 ### 1.16.9 (2025-09-23)
