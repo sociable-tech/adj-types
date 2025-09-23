@@ -37,10 +37,6 @@ jobs:
           npm run postversion
           git add deno.json
           git commit -m "chore: sync deno.json with package.json" || echo "No changes to commit"
-
-      - name: Build NPM Package
-        run: npm run build:npm
-
       - name: Publish to NPM
         run: npm publish ./npm --access public
         env:
@@ -48,6 +44,7 @@ jobs:
 
       - name: Publish to JSR
         run: npx jsr publish
+
       - name: Push Changes
         run: git push --follow-tags origin main
         env:

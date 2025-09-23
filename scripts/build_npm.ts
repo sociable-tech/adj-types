@@ -21,3 +21,5 @@ await build({
     types: "./mod.d.ts"
   },
 });
+
+await Deno.copyFile(".npmignore", "./npm/.npmignore");
