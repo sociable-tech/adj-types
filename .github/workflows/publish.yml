@@ -44,10 +44,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - name: Publish to JSR
-        run: deno publish
-        env:
-          DENO_AUTH_TOKEN: ${{ secrets.DENO_AUTH_TOKEN }}
-
+        run: npx jsr publish
       - name: Push Changes
         run: git push --follow-tags origin main
         env:

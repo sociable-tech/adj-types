@@ -2,9 +2,14 @@
   "name": "@adjudication/types",
   "version": "1.16.9",
   "description": "The project refers to the types of Adjudication package that will be published to NPM and shared between backend and frontend for reusablity and ensuring consistency.",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./mod.js",
+  "types": "./mod.d.ts",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./mod.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/sociable-tech/adj-types.git"
@@ -14,17 +19,19 @@
     "email": "sherazahmdd@gmail.com"
   },
   "files": [
-    "dist"
+    "mod.js",
+    "mod.d.ts"
   ],
   "scripts": {
-    "build": "tsc",
+    "build:npm": "deno run -A scripts/build_npm.ts $(node -p \"require('./package.json').version\") && rollup -c",
     "bump:deno": "node scripts/bump_deno.js",
     "version": "npm run bump:deno && git add deno.json",
-    "postversion": "npm run build && git push --follow-tags && npm publish"
+    "postversion": "npm run build:npm && git push --follow-tags && npm publish"
   },
   "license": "MIT",
   "devDependencies": {
-    "npm-run-all": "^4.1.5",
+    "rollup": "^4.52.2",
+    "rollup-plugin-dts": "^6.2.3",
     "standard-version": "^9.5.0",
     "typescript": "^5.7.3"
   }

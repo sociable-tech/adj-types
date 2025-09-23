@@ -1,11 +1,6 @@
 {
   "compilerOptions": {
-    "declaration": true,
     "noEmit": true,
-    "outDir": "./dist",
-    "target": "ES6",
-    "module": "CommonJS",
-    "esModuleInterop": true,
     "strict": true,
     "allowImportingTsExtensions": true
   },
