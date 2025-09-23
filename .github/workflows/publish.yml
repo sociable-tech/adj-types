@@ -38,9 +38,6 @@ jobs:
           git add deno.json
           git commit -m "chore: sync deno.json with package.json" || echo "No changes to commit"
 
-      - name: Build Deno Package
-        run: deno run --allow-read --allow-write ./scripts/build_deno.ts
-
       - name: Publish to NPM
         run: npm publish --access public
         env:
