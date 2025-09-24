@@ -1,6 +1,6 @@
 {
   "name": "@adjudication/types",
-  "version": "1.16.11",
+  "version": "1.16.15",
   "exports": {
     ".": "./src/index.ts"
   },
