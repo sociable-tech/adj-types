@@ -2,9 +2,13 @@
   "name": "@adjudication/types",
   "version": "1.16.13",
   "description": "The project refers to the types of Adjudication package that will be published to NPM and shared between backend and frontend for reusablity and ensuring consistency.",
+  "type": "module",
   "main": "./mod.js",
   "types": "./mod.d.ts",
-  "type": "module",
+  "files": [
+    "mod.js",
+    "mod.d.ts"
+  ],
   "exports": {
     ".": {
       "import": "./mod.js"
@@ -18,10 +22,6 @@
     "name": "Sheraz Ahmed",
     "email": "sherazahmdd@gmail.com"
   },
-  "files": [
-    "mod.js",
-    "mod.d.ts"
-  ],
   "scripts": {
     "build:npm": "deno run -A scripts/build_npm.ts $(node -p \"require('./package.json').version\") && rollup -c",
     "bump:deno": "node scripts/bump_deno.js",
