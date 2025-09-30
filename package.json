@@ -1,6 +1,6 @@
 {
   "name": "@adjudication/types",
-  "version": "1.16.16",
+  "version": "1.16.17",
   "description": "The project refers to the types of Adjudication package that will be published to NPM and shared between backend and frontend for reusablity and ensuring consistency.",
   "type": "module",
   "main": "./mod.js",
