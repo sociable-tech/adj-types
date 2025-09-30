@@ -43,16 +43,16 @@ export interface Profile {
 }
 
 
-export const JURISDICTIONS: Record<string, string> = {
-  new_south_wales: 'NSW',
-  victoria: 'Victoria',
-  queensland: 'Queensland',
-  south_australia: 'South Australia',
-  western_australia: 'Western Australia',
-  australian_capital_territory: 'ACT',
-  northern_territory: 'NT',
-  tasmania: 'Tasmania',
-};
+export const JURISDICTIONS = [
+  { label: 'New South Wales', value: 'new_south_wales' },
+  { label: 'Victoria', value: 'victoria' },
+  { label: 'Queensland', value: 'queensland' },
+  { label: 'South Australia', value: 'south_australia' },
+  { label: 'Western Australia', value: 'western_australia' },
+  { label: 'Australian Capital Territory', value: 'australian_capital_territory' },
+  { label: 'Northern Territory', value: 'northern_territory' },
+  { label: 'Tasmania', value: 'tasmania' },
+]
 
 export const AREA_OF_PRACTICE = [
   {"label": "Construction Contract Disputes", "value": "construction_contract_disputes"},
