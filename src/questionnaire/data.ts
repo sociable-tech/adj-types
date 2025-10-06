@@ -469,7 +469,7 @@ export const sopanswQuestionnaireComprehensive: Questionnaire = {
 
 export const sopanswQuestionnaireComprehensive1: Questionnaire = {
   id: "sopa-nsw-eligibility",
-  title: "SOPA NSW Contract Eligibility Questionnaire (Comprehensive)",
+  title: "SOPA NSW Contract Eligibility Questionnaire (Comprehensive1)",
   description:
     "This questionnaire helps determine eligibility under the Security of Payment Act (SOPA) in New South Wales (NSW) and assigns the applicant to an appropriate role.",
   questions: [
