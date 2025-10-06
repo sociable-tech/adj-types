@@ -473,7 +473,7 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
   description:
     "This questionnaire helps determine eligibility under the Security of Payment Act (SOPA) in New South Wales (NSW) and assigns the applicant to an appropriate role.",
   questions: [
-    // Section 1: Identification
+    // Section : Tell us about yourself
     {
       id: "Q1",
       text: "Your name or business name",
@@ -495,7 +495,7 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
       options: null
     },
 
-    // Section 2: Contract Nature
+    // Section : About your contract
     {
       id: "Q3",
       text: "Is your contract about money or loans?",
@@ -532,7 +532,7 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
       options: ["Yes", "No"]
     },
 
-    // Section 3: Jurisdiction
+    // Section : Where is the work happening?
     {
       id: "Q6",
       text: "Is this about construction or building work?",
@@ -612,7 +612,7 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
     },
     {
       id: "Q12",
-      text: "Do you provide materials or components to form part of any building, structure, or work? (s.6(1)(a)(i))",
+      text: "Do you supply any materials or parts that are used in building or construction work?",
       key: "goods_materials",
       parent: "Q11",
       section: "Goods Provider Specifics",
@@ -622,7 +622,7 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
     },
     {
       id: "Q13",
-      text: "Do you provide plant or materials by sale or hire for construction? (s.6(1)(a)(ii))",
+      text: "Do you sell or rent out equipment or materials for construction?",
       key: "goods_plants",
       parent: "Q11",
       section: "Goods Provider Specifics",
@@ -632,7 +632,7 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
     },
     {
       id: "Q14",
-      text: "Do you provide architectural, design, surveying, or quantity surveying services? (s.6(1)(b)(ii))",
+      text: "Which of the following services you provide ?",
       key: "services_design",
       parent: "Q11",
       section: "Service Provider Specifics",
@@ -647,7 +647,7 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
     },
     {
       id: "Q15",
-      text: "Do you provide building, engineering, interior/exterior decoration, or landscape advisory services? (s.6(1)(b)(iii))",
+      text: "Do you provide services like building, engineering, interior or exterior decoration, or landscape advice?",
       key: "services_engineering",
       parent: "Q11",
       section: "Service Provider Specifics",
@@ -663,7 +663,7 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
     },
     {
       id: "Q16",
-      text: "Do you provide labour to carry out construction work? (s.6(1)(b)(i))",
+      text: "Do you supply workers to do construction work?",
       key: "labour_provider",
       parent: "Q11",
       section: "Service Provider Specifics",
