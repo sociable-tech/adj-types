@@ -467,6 +467,266 @@ export const sopanswQuestionnaireComprehensive: Questionnaire = {
   isPublic: true
 };
 
+export const sopanswQuestionnaireComprehensive1: Questionnaire = {
+  id: "sopa-nsw-eligibility",
+  title: "SOPA NSW Contract Eligibility Questionnaire (Comprehensive1)",
+  description:
+    "This questionnaire helps determine eligibility under the Security of Payment Act (SOPA) in New South Wales (NSW) and assigns the applicant to an appropriate role.",
+  questions: [
+    // Section : Tell us about yourself
+    {
+      id: "Q1",
+      text: "Your name or business name",
+      key: "contract_party_name",
+      parent: null,
+      section: "Tell us about yourself",
+      dependantAnswer: null,
+      type: "text",
+      options: null
+    },
+    {
+      id: "Q2",
+      text: "Business number (optional)",
+      key: "abn_acn",
+      parent: "Q1",
+      section: "Tell us about yourself",
+      dependantAnswer: null,
+      type: "text",
+      options: null
+    },
+
+    // Section : About your contract
+    {
+      id: "Q3",
+      text: "Is your contract about money or loans?",
+      key: "financial_contract",
+      parent: null,
+      section: "About your contract",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q4",
+      text: "Which of these apply?",
+      key: "financial_options",
+      parent: "Q3",
+      section: "About your contract",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: [
+        "Lending or repaying a loan",
+        "Guaranteeing payment of money owed",
+        "Repaying money lent",
+        "Providing indemnity regarding construction work"
+      ]
+    },
+    {
+      id: "Q5",
+      text: "Is the contract tied to a recognised financial institution (loan-conditioned construction, s.7(3) SOPA NSW)?",
+      key: "financial_institution",
+      parent: "Q3",
+      section: "About your contract",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+
+    // Section : Where is the work happening?
+    {
+      id: "Q6",
+      text: "Is this about construction or building work?",
+      key: "construction_related",
+      parent: null,
+      section: "Where is the work happening?",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q7",
+      text: "Is the work happening in New South Wales (NSW)?",
+      key: "nsw_construction",
+      parent: "Q6",
+      section: "Where is the work happening?",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+
+    // What kind of work do you do?
+    {
+      id: "Q8",
+      text: "What kind of construction work? (select all that apply)",
+      key: "construction_scope",
+      parent: "Q7",
+      section: "What kind of work do you do?",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: [
+        "Building, alteration, repair, restoration, demolition (s.5(1)(a))",
+        "Infrastructure (roads, pipelines, runways, docks, railways, etc.) (s.5(1)(b))",
+        "Installations (heating, ventilation, fire, safety, power, comms) (s.5(1)(c))",
+        "Cleaning during construction (s.5(1)(d))",
+        "Preparatory work (site clearance, foundations, scaffolding, prefabrication, landscaping) (s.5(1)(e))",
+        "Painting or decorating (s.5(1)(f))",
+        "Other prescribed work (s.5(1)(g))"
+      ]
+    },
+    {
+      id: "Q9",
+      text: "Do your work fall into any of these special categories?",
+      key: "construction_exclusions",
+      parent: "Q8",
+      section: "What kind of work do you do?",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: [
+        "Drilling for or excavation of oil or natural gas (s.5(2)(a))",
+        "Extraction of minerals or tunnelling/boring for that purpose (s.5(2)(b))",
+        "Other prescribed exclusions (s.5(2)(c))",
+        "No exclusions apply"
+      ]
+    },
+
+    // Section: What do you provide?
+    {
+      id: "Q10",
+      text: "Do you provide goods, services or both?",
+      key: "scope_s6",
+      parent: "Q6",
+      section: "What do you provide?",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q11",
+      text: "What category best describes you?",
+      key: "provider_category",
+      parent: "Q10",
+      section: "What do you provide?",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Goods Provider", "Service Provider", "Other"]
+    },
+    {
+      id: "Q12",
+      text: "Do you supply any materials or parts that are used in building or construction work?",
+      key: "goods_materials",
+      parent: "Q11",
+      section: "Goods Provider Specifics",
+      dependantAnswer: "Goods Provider",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q13",
+      text: "Do you sell or rent out equipment or materials for construction?",
+      key: "goods_plants",
+      parent: "Q11",
+      section: "Goods Provider Specifics",
+      dependantAnswer: "Goods Provider",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q14",
+      text: "Which of the following services you provide ?",
+      key: "services_design",
+      parent: "Q11",
+      section: "Service Provider Specifics",
+      dependantAnswer: "Service Provider",
+      type: "multiple-choice",
+      options: [
+        "Architectural services",
+        "Design services",
+        "Surveying services",
+        "Quantity surveying services"
+      ]
+    },
+    {
+      id: "Q15",
+      text: "Do you provide services like building, engineering, interior or exterior decoration, or landscape advice?",
+      key: "services_engineering",
+      parent: "Q11",
+      section: "Service Provider Specifics",
+      dependantAnswer: "Service Provider",
+      type: "multiple-choice",
+      options: [
+        "Building services",
+        "Engineering services",
+        "Interior decoration",
+        "Exterior decoration",
+        "Landscape advisory services"
+      ]
+    },
+    {
+      id: "Q16",
+      text: "Do you supply workers to do construction work?",
+      key: "labour_provider",
+      parent: "Q11",
+      section: "Service Provider Specifics",
+      dependantAnswer: "Service Provider",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+
+    // Section : How does your business work?
+    {
+      id: "Q17a",
+      text: "Do you work directly with the property owner or main client?",
+      key: "contracts_with_principal",
+      parent: "Q6",
+      section: "How does your business work?",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q17b",
+      text: "Do you hire other people or companies to help with the work?",
+      key: "engages_subcontractors",
+      parent: "Q6",
+      section: "How does your business work?",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+
+    // Section 7: Just a few more details
+    {
+      id: "Q18",
+      text: "Are you working as an employee for someone else?",
+      key: "employee_status",
+      parent: null,
+      section: "Just a few more details",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: ["Yes", "No"]
+    },
+    {
+      id: "Q19",
+      text: "Anything else you'd like to tell us? (optional)",
+      key: "additional_notes",
+      parent: "Q18",
+      section: "Just a few more details",
+      dependantAnswer: null,
+      type: "text",
+      options: null
+    }
+  ],
+  createdAt: new Date("2025-09-02T12:00:00Z"),
+  updatedAt: new Date("2025-09-02T12:00:00Z"),
+  country: "Australia",
+  state: "NSW",
+  jurisdiction: "SOPA NSW",
+  tags: ["eligibility", "construction", "contract", "sopa", "nsw", "enhanced"],
+  version: "2.0.0",
+  isActive: true,
+  isPublic: true
+};
+
 export const sopanswPhase2Questionnaire: Questionnaire = {
   id: "sopa-nsw-phase-2",
   title: "Phase 2 - Payment Claim Validation (SOPA NSW)",
@@ -1414,3 +1674,4 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
   isActive: true,
   isPublic: true
 };
+
