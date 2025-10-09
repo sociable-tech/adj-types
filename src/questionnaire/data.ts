@@ -523,7 +523,7 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
     },
     {
       id: "Q5",
-      text: "Is the contract tied to a recognised financial institution (loan-conditioned construction, s.7(3) SOPA NSW)?",
+      text: "Is the contract tied to a recognised financial institution ?",
       key: "financial_institution",
       parent: "Q3",
       section: "About your contract",
@@ -564,13 +564,13 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
       dependantAnswer: "Yes",
       type: "multiple-choice",
       options: [
-        "Building, alteration, repair, restoration, demolition (s.5(1)(a))",
-        "Infrastructure (roads, pipelines, runways, docks, railways, etc.) (s.5(1)(b))",
-        "Installations (heating, ventilation, fire, safety, power, comms) (s.5(1)(c))",
-        "Cleaning during construction (s.5(1)(d))",
-        "Preparatory work (site clearance, foundations, scaffolding, prefabrication, landscaping) (s.5(1)(e))",
-        "Painting or decorating (s.5(1)(f))",
-        "Other prescribed work (s.5(1)(g))"
+        "Building, alteration, repair, restoration, demolition",
+        "Infrastructure (roads, pipelines, runways, docks, railways, etc.)",
+        "Installations (heating, ventilation, fire, safety, power, comms)",
+        "Cleaning during construction.",
+        "Preparatory work (site clearance, foundations, scaffolding, prefabrication, landscaping)",
+        "Painting or decorating.",
+        "Other prescribed work."
       ]
     },
     {
@@ -582,9 +582,9 @@ export const sopanswQuestionnaireComprehensive1: Questionnaire = {
       dependantAnswer: null,
       type: "multiple-choice",
       options: [
-        "Drilling for or excavation of oil or natural gas (s.5(2)(a))",
-        "Extraction of minerals or tunnelling/boring for that purpose (s.5(2)(b))",
-        "Other prescribed exclusions (s.5(2)(c))",
+        "Drilling for or excavation of oil or natural gas.",
+        "Extraction of minerals or tunnelling/boring for that purpose.",
+        "Other prescribed exclusions.",
         "No exclusions apply"
       ]
     },
@@ -1053,7 +1053,7 @@ export const sopanswPhase2Questionnaire: Questionnaire = {
   isPublic: true
 };
 
-export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
+export const sopanswPhase2QuestionnaireComprehensive1: Questionnaire = {
   id: "sopa-nsw-phase-2",
   title: "Phase 2 - Payment Claim Validation (SOPA NSW)",
   description: "Checks all SOPA NSW s.8-s.13 requirements for Builders, Contractors, and Head Contractors before a payment claim proceeds.",
@@ -1061,7 +1061,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
        // A. Role Path Identification
         {
           id: "R1",
-          text: "Which role do you occupy under this contract?",
+          text: "What is your role in this contract?",
           key: "role",
           parent: null,
           section: "Role",
@@ -1073,7 +1073,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         //Case Information
         {
           id: "CASE1",
-          text: "Case Title (for identification purposes)",
+          text: "Case Title",
           key: "case_title",
           parent: null,
           section: "Case Information",
@@ -1083,7 +1083,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "CASE2",
-          text: "Case Description (detailed description of your claim)",
+          text: "Case Description ",
           key: "case_description",
           parent: "CASE1",
           section: "Case Information",
@@ -1095,7 +1095,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         // --- BUILDER path prerequisites ---
         {
           id: "B1",
-          text: "Provide your ABN/ACN for licensing cross-reference.",
+          text: "What is your ABN or ACN",
           key: "abn_acn",
           parent: "R1",
           section: "Builder Prerequisites",
@@ -1106,7 +1106,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         // UPDATED: Builder licence dual-input
         {
           id: "B2_mode",
-          text: "How will you provide your NSW building licence?",
+          text: "How would you like to share your NSW building licence?",
           key: "builder_licence_mode",
           parent: "R1",
           section: "Builder Prerequisites",
@@ -1166,7 +1166,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "B3",
-          text: "Is the building contract compliant with the Home Building Act 1989 s.4 (licensed contracting)?",
+          text: "Is your building contract properly licensed under NSW rules?",
           key: "hba_s4_compliance",
           parent: "R1",
           section: "Builder Prerequisites",
@@ -1197,7 +1197,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "B5",
-          text: "Upload evidence of s.92 insurance (HBCF policy/certificate).",
+          text: "Upload your home building insurance certificate (HBCF)",
           key: "hba_s92_insurance",
           parent: "B5_mode",
           section: "Builder Prerequisites",
@@ -1331,7 +1331,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         // --- COMMON Payment Claim (served + dual-input for claim doc) ---
         {
           id: "C0",
-          text: "Have you served a payment claim under this contract?",
+          text: "Have you already sent a payment claim for this job?",
           key: "payment_claim_served",
           parent: null,
           section: "Payment Claim",
@@ -1351,7 +1351,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "C1a",
-          text: "Upload the payment claim you served (PDF or image).",
+          text: "Upload the payment claim you sent (PDF or photo).",
           key: "payment_claim_file",
           parent: "C1_mode",
           section: "Payment Claim",
@@ -1435,7 +1435,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "C4",
-          text: "Upload supporting calculations (progress valuation, retention, etc.).",
+          text: "Upload supporting calculations.",
           key: "calculation_support_file",
           parent: "C4_mode",
           section: "Payment Claim",
@@ -1445,7 +1445,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "C4a",
-          text: "Provide calculation details (progress valuation, retention, etc.)",
+          text: "Enter your calculation details ",
           key: "calculation_support_text",
           parent: "C4_mode",
           section: "Payment Claim",
@@ -1455,7 +1455,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "C5",
-          text: "Does the claim include any s.13(3) amounts (e.g., suspension costs, retention)?",
+          text: "Does your claim include any extra costs (e.g., suspension costs, retention)?",
           key: "includes_s13_3",
           parent: "C3",
           section: "Payment Claim",
@@ -1465,7 +1465,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "C5a",
-          text: "If yes, describe the s.13(3) amounts included.",
+          text: "Explain what extra costs you’ve added to your claim.",
           key: "s13_3_details",
           parent: "C5",
           section: "Payment Claim",
@@ -1477,7 +1477,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         // --- Timing & Service ---
         {
           id: "T1",
-          text: "Claim service date.",
+          text: "When did you send the claim?",
           key: "claim_service_date",
           parent: "C0",
           section: "Timing & Service",
@@ -1487,7 +1487,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "T2",
-          text: "Did the contract specify an earlier 'named month' reference date (s.13(1B))?",
+          text: "Did the contract specify an earlier 'named month' reference date ?",
           key: "earlier_named_month",
           parent: "T1",
           section: "Timing & Service",
@@ -1497,7 +1497,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "T3",
-          text: "Has the contract been terminated (s.13(1C))?",
+          text: "Has the contract been ended or cancelled?",
           key: "contract_terminated",
           parent: "T1",
           section: "Timing & Service",
@@ -1517,7 +1517,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "T4",
-          text: "Is this the only payment claim in the named month (s.13(5))?",
+          text: "Is this the only payment claim in the named month?",
           key: "single_claim_month",
           parent: "T1",
           section: "Timing & Service",
@@ -1527,7 +1527,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "T4a",
-          text: "If no, select the permitted exception (s.13(6)).",
+          text: "If no, select the permitted exception.",
           key: "multi_claim_exception",
           parent: "T4",
           section: "Timing & Service",
@@ -1645,7 +1645,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "N2a",
-          text: "Upload the Notice you served (optional).",
+          text: "Upload the notice you sent.(Optional)",
           key: "notice_file",
           parent: "N_mode",
           section: "Adjudication Notice",
@@ -1655,7 +1655,7 @@ export const sopanswPhase2QuestionnaireComprehensive: Questionnaire = {
         },
         {
           id: "N2b",
-          text: "Method and recipient of service (email/hand/post and recipient details).",
+          text: "Method and recipient of service.",
           key: "notice_service_details",
           parent: "N_mode",
           section: "Adjudication Notice",
