@@ -1723,17 +1723,6 @@ export const sopanswPhase2QuestionnaireComprehensiveWithRespondent: Questionnair
           type: "text",
           options: null
         },
-        {
-          id: "CASE4",
-          text: "Respondent's company/organization name (if applicable)",
-          key: "respondent_company",
-          parent: "CASE3",
-          section: "Case Information",
-          dependantAnswer: null,
-          type: "text",
-          options: null
-        },
-
         // --- BUILDER path prerequisites ---
         {
           id: "B1",
