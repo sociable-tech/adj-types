@@ -2312,7 +2312,7 @@ export const sopanswPhase2QuestionnaireComprehensiveWithRespondent: Questionnair
   state: "NSW",
   jurisdiction: "SOPA NSW",
   tags: ["eligibility", "construction", "contract", "sopa", "nsw", "enhanced"],
-  version: "2.0.0",
+  version: "3.0.0",
   isActive: true,
   isPublic: true
 };
