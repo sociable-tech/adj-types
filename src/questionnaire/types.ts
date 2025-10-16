@@ -31,8 +31,9 @@ export type Question = {
   parent: string | null
   section: string | null
   dependantAnswer: string | null
-  type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date";
+  type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date" | 'dropdown';
   options: string[] | null
+  helpText?: string | null;
 }
 
 // Response Type (using hashmap & normalized data)
