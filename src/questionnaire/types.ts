@@ -33,6 +33,7 @@ export type Question = {
   dependantAnswer: string | null
   type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date" | 'dropdown';
   options: string[] | null
+  helpText?: string | null;
 }
 
 // Response Type (using hashmap & normalized data)
