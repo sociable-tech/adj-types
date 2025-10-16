@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.17.0 (2025-10-16)
+
+
+### Features
+
+* enhance SOPA NSW questionnaires with new versions and improved question structure ([#21](https://github.com/sociable-tech/adj-types/issues/21)) ([d803f1a](https://github.com/sociable-tech/adj-types/commit/d803f1ad1d871bbd588d84eec73ffc50723f2a32))
+
 ### 1.16.20 (2025-10-14)
 
 ### 1.16.19 (2025-10-09)
