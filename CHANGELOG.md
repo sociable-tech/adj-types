@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.18.0 (2025-10-16)
+
+
+### Features
+
+* add 'dropdown' type to Question type definition ([#22](https://github.com/sociable-tech/adj-types/issues/22)) ([ff34557](https://github.com/sociable-tech/adj-types/commit/ff345571fe92e4127da6df1f0ab1da5d72823c9c))
+
 ## 1.17.0 (2025-10-16)
 
 
