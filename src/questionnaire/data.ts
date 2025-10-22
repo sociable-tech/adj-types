@@ -2537,6 +2537,7 @@ export const sopanswPhase2QuestionnaireComprehensiveWithRespondent: Questionnair
 };
 
 // Enhanced Phase 2 questionnaire with user-friendly language and help text
+// This commit is to deploy successfully to jsr with authenticated user (sheraz)
 export const sopanswPhase2QuestionnaireEnhanced: Questionnaire = {
   id: "sopa-nsw-phase-2-enhanced",
   title: "Phase 2 - Payment Claim Validation (Enhanced)",
