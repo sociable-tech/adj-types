@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.20.0 (2025-11-05)
+
+
+### Features
+
+* add contractual and date-specific questions to Phase 2 questionnaire for SOPA NSW ([85028a9](https://github.com/sociable-tech/adj-types/commit/85028a92ddd1817ad6fde923b4b7344f52d6baf9))
+
 ### 1.19.1 (2025-10-22)
 
 ## 1.19.0 (2025-10-22)
