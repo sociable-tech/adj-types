@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.21.0 (2025-11-07)
+
+
+### Features
+
+* update questionnaire types to include boolean option for questions ([5b596d8](https://github.com/sociable-tech/adj-types/commit/5b596d8df92baae0a8037d38c1e125210e8b3235))
+
 ### 1.20.1 (2025-11-05)
 
 ## 1.20.0 (2025-11-05)
