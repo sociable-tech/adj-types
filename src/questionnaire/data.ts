@@ -1408,7 +1408,7 @@ export const sopanswQuestionnaireComprehensive3: Questionnaire = {
       parent: "Q3",
       section: "About your contract",
       dependantAnswer: null,
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes", "No"],
       helpText: "Section 7(3) of SOPA NSW excludes construction work or supply of goods/services that are undertaken as a condition of a loan agreement with a bank or financial institution."
     },
@@ -1421,7 +1421,7 @@ export const sopanswQuestionnaireComprehensive3: Questionnaire = {
       parent: null,
       section: "Where is the work happening?",
       dependantAnswer: null,
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes - NSW", "No - Other states and territories"],
       helpText: "SOPA NSW only applies to construction work or supply of goods/services that are carried out in New South Wales, as per Section 7(4) of the Act."
     },
@@ -1471,7 +1471,7 @@ export const sopanswQuestionnaireComprehensive3: Questionnaire = {
       parent: "Q5",
       section: "What do you provide?",
       dependantAnswer: "Yes - NSW",
-      type: "boolean",
+      type: "multiple-choice",
       options: [
         "I carry out construction work (building, alteration, repair, etc.)",
         "I provide goods or services to support construction work (materials, equipment, design, engineering, etc.)"
@@ -1487,7 +1487,7 @@ export const sopanswQuestionnaireComprehensive3: Questionnaire = {
       parent: "Q8",
       section: "What do you provide?",
       dependantAnswer: "I carry out construction work (building, alteration, repair, etc.)",
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes", "No"],
       helpText: "This helps determine if you are a 'Head Contractor' (works directly with the principal) or a 'Builder' (works under another contractor). This affects your rights and obligations under SOPA NSW."
     },
@@ -1498,7 +1498,7 @@ export const sopanswQuestionnaireComprehensive3: Questionnaire = {
       parent: "Q9",
       section: "What do you provide?",
       dependantAnswer: "Yes",
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes", "No"],
       helpText: "A 'Head Contractor' both works directly with the principal AND engages subcontractors. This distinction is important for determining your role classification under SOPA NSW."
     },
@@ -1549,7 +1549,7 @@ export const sopanswQuestionnaireComprehensive3: Questionnaire = {
       parent: null,
       section: "Just a few more details",
       dependantAnswer: null,
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes", "No"],
       helpText: "SOPA NSW does not apply to employees working under the Industrial Relations Act 1996. If you are an employee, you would typically use industrial relations processes rather than SOPA NSW for payment disputes."
     },
@@ -1604,7 +1604,7 @@ export const sopanswQuestionnaireComprehensive5: Questionnaire = {
       parent: null,
       section: "Where is the work happening?",
       dependantAnswer: null,
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes - NSW", "No - Other states and territories"],
       helpText: "SOPA NSW only applies to construction work or supply of goods/services that are carried out in New South Wales, as per Section 7(4) of the Act."
     },
@@ -1645,7 +1645,7 @@ export const sopanswQuestionnaireComprehensive5: Questionnaire = {
       parent: "Q3",
       section: "About your contract",
       dependantAnswer: null,
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes", "No"],
       helpText: "Section 7(3) of SOPA NSW excludes construction work or supply of goods/services that are undertaken as a condition of a loan agreement with a bank or financial institution."
     },
@@ -1658,7 +1658,7 @@ export const sopanswQuestionnaireComprehensive5: Questionnaire = {
       parent: null,
       section: "Where is the work happening?",
       dependantAnswer: null,
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes - NSW", "No - Other states and territories"],
       helpText: "SOPA NSW only applies to construction work or supply of goods/services that are carried out in New South Wales, as per Section 7(4) of the Act."
     },
@@ -1708,7 +1708,7 @@ export const sopanswQuestionnaireComprehensive5: Questionnaire = {
       parent: "Q5",
       section: "What do you provide?",
       dependantAnswer: "Yes - NSW",
-      type: "boolean",
+      type: "multiple-choice",
       options: [
         "I carry out construction work (building, alteration, repair, etc.)",
         "I provide goods or services to support construction work (materials, equipment, design, engineering, etc.)"
@@ -1724,7 +1724,7 @@ export const sopanswQuestionnaireComprehensive5: Questionnaire = {
       parent: "Q8",
       section: "What do you provide?",
       dependantAnswer: "I carry out construction work (building, alteration, repair, etc.)",
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes", "No"],
       helpText: "This helps determine if you are a 'Head Contractor' (works directly with the principal) or a 'Builder' (works under another contractor). This affects your rights and obligations under SOPA NSW."
     },
@@ -1735,7 +1735,7 @@ export const sopanswQuestionnaireComprehensive5: Questionnaire = {
       parent: "Q9",
       section: "What do you provide?",
       dependantAnswer: "Yes",
-      type: "boolean",
+      type: "multiple-choice",
       options: ["Yes", "No"],
       helpText: "A 'Head Contractor' both works directly with the principal AND engages subcontractors. This distinction is important for determining your role classification under SOPA NSW."
     },
