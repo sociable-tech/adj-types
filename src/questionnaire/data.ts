@@ -1576,8 +1576,6 @@ export const sopanswQuestionnaireComprehensive3: Questionnaire = {
   isPublic: true
 };
 
-
-
 // Fifth version of Phase 1 questionnaire
 export const sopanswQuestionnaireComprehensive5: Questionnaire = {
   id: "sopa-nsw-eligibility",
@@ -1784,6 +1782,207 @@ export const sopanswQuestionnaireComprehensive5: Questionnaire = {
       text: "Anything else you'd like to tell us? (optional)",
       key: "additional_notes",
       parent: "null",
+      section: "Just a few more details",
+      dependantAnswer: null,
+      type: "text",
+      options: null,
+      helpText: "Any additional information about your contract or circumstances that might be relevant to your SOPA NSW eligibility assessment."
+    }
+  ],
+  createdAt: new Date("2025-09-02T12:00:00Z"),
+  updatedAt: new Date("2025-09-02T12:00:00Z"),
+  country: "Australia",
+  state: "NSW",
+  jurisdiction: "SOPA NSW",
+  tags: ["eligibility", "construction", "contract", "sopa", "nsw", "enhanced"],
+  version: "5.0.0",
+  isActive: true,
+  isPublic: true
+};
+
+
+// Sixth version of Phase 1 questionnaire
+export const sopanswQuestionnaireComprehensive6: Questionnaire = {
+  id: "sopa-nsw-eligibility",
+  title: "SOPA NSW Contract Eligibility Questionnaire (Comprehensive3)",
+  description:
+    "This questionnaire helps determine eligibility under the Security of Payment Act (SOPA) in New South Wales (NSW) and assigns the applicant to an appropriate role.",
+  questions: [
+    // Section 1: Tell us about yourself and location
+    {
+      id: "Q1",
+      text: "Your name or business name",
+      key: "contract_party_name",
+      parent: null,
+      section: "Tell us about yourself and location",
+      dependantAnswer: null,
+      type: "text",
+      options: null,
+      helpText: "We need to identify the legal entity or person who will be making the payment claim under SOPA NSW."
+    },
+    {
+      id: "Q2",
+      text: "Business number (optional)",
+      key: "abn_acn",
+      parent: "Q1",
+      section: "Tell us about yourself and location",
+      dependantAnswer: null,
+      type: "text",
+      options: null,
+      helpText: "Your ABN or ACN helps us verify your business registration and ensure accurate record-keeping for your application."
+    },
+    {
+      id: "Q3",
+      text: "Is the construction contract for work or the provision of goods or services in NSW?",
+      key: "nsw_location",
+      parent: "Q1",
+      section: "Tell us about yourself and location",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Yes", "No"],
+      helpText: "SOPA NSW only applies to construction work or supply of goods/services that are carried out in New South Wales, as per Section 7(4) of the Act."
+    },
+ 
+
+
+    // Section 2: About your contract (RESTRUCTURED)
+    {
+      id: "Q5",
+      text: "Does your construction contract include any of the following excluded financial arrangements?",
+      key: "financial_aspects",
+      parent: null,
+      section: "About your contract",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: [
+        "A loan, guarantee or indemnity agreement.",
+        "The construction work or delivery of goods and services a condition of an agreement with a financial institution",
+        "not applicable"
+      ],
+      helpText: "Section 7(2) of SOPA NSW excludes contracts that are primarily financial in nature. These questions help determine if your contract falls under these exclusions."
+    },
+
+    // Section 4: What is the nature of the construction work? (RENAMED)
+    {
+      id: "Q6",
+      text: "What is the primary type of construction work under the construction contract?",
+      key: "construction_scope",
+      parent: null,
+      section: "What is the nature of the construction work?",
+      dependantAnswer: "Yes",
+      type: "multiple-choice",
+      options: [
+        "Building, alteration, repair, restoration, demolition",
+        "Infrastructure (roads, pipelines, runways, docks, railways, etc.)",
+        "Installations (heating, ventilation, fire, safety, power, comms)",
+        "Cleaning during construction",
+        "Preparatory work (site clearance, foundations, scaffolding, prefabrication, landscaping)",
+        "Painting or decorating",
+        "Other prescribed work"
+      ],
+      helpText: "Section 5(1) of SOPA NSW defines 'construction work' broadly to include building, infrastructure, installations, and related activities. This helps us determine if your work falls under the Act's scope."
+    },
+    {
+      id: "Q7",
+      text: "Does the construction contract include any of the following types of work",
+      key: "construction_exclusions",
+      parent: "Q6",
+      section: "What is the nature of the construction work?",
+      dependantAnswer: null,
+      type: "multiple-choice",
+      options: [
+        "Drilling for or excavation of oil or natural gas",
+        "Extraction of minerals or tunnelling/boring for that purpose",
+        "Other prescribed exclusions",
+        "No exclusions apply"
+      ],
+      helpText: "Section 5(2) of SOPA NSW excludes certain types of work including oil/gas drilling, mineral extraction, and tunnelling for mining purposes. These exclusions are specified in the legislation."
+    },
+
+    // Section 5: What do you provide? (RESTRUCTURED WITH s.5/s.6 SPLIT)
+    {
+      id: "Q8",
+      text: "What best describes your role in this construction project?",
+      key: "primary_role",
+      parent: "Q",
+      section: "What do you provide?",
+      dependantAnswer: "Yes",
+      type: "boolean",
+      options: [
+        "I carry out construction work (building, alteration, repair, etc.)",
+        "I provide goods or services to support construction work (materials, equipment, design, engineering, etc.)"
+      ],
+      helpText: "SOPA NSW distinguishes between those who carry out construction work (Section 5) and those who provide goods or services related to construction work (Section 6). This determines which part of the Act applies to you."
+    },
+
+    // For s.5 Construction Work Path
+    {
+      id: "Q9",
+      text: "Under the construction contract are you classified as an employee of the respondent?",
+      key: "contracts_with_principal",
+      parent: "Q8",
+      section: "What do you provide?",
+      dependantAnswer: "I carry out construction work (building, alteration, repair, etc.)",
+      type: "boolean",
+      options: ["Yes", "No"],
+      helpText: "This helps determine if you are a 'Head Contractor' (works directly with the principal) or a 'Builder' (works under another contractor). This affects your rights and obligations under SOPA NSW."
+    },
+    {
+      id: "Q10",
+      text: "Under the Construction Contract Please select the option which describe you?",
+      key: "engages_subcontractors",
+      parent: "Q9",
+      section: "What do you provide?",
+      dependantAnswer: "Yes",
+      type: "boolean",
+      options: ["Main contractor", "Subcontractor"],
+      helpText: "A 'Head Contractor' both works directly with the principal AND engages subcontractors. This distinction is important for determining your role classification under SOPA NSW."
+    },
+
+    // For s.6 Goods/Services Path
+    {
+      id: "Q11",
+      text: "What category best describes you?",
+      key: "provider_category",
+      parent: "Q8",
+      section: "What do you provide?",
+      dependantAnswer: "I provide goods or services to support construction work (materials, equipment, design, engineering, etc.)",
+      type: "multiple-choice",
+      options: [
+        "Goods Provider - Materials or components for building/construction",
+        "Goods Provider - Plant or materials by sale or hire",
+        "Service Provider - Architectural services",
+        "Service Provider - Design services",
+        "Service Provider - Surveying services",
+        "Service Provider - Quantity surveying services",
+        "Service Provider - Building services",
+        "Service Provider - Engineering services",
+        "Service Provider - Interior decoration",
+        "Service Provider - Exterior decoration",
+        "Service Provider - Landscape advisory services",
+        "Service Provider - Labour to carry out construction work",
+        "Other (please describe)"
+      ],
+      helpText: "Section 6 of SOPA NSW covers suppliers of goods and providers of services related to construction work. This helps us classify your specific role and determine your rights under the Act."
+    },
+    {
+      id: "Q12",
+      text: "Please describe your category",
+      key: "provider_category_other",
+      parent: "Q11",
+      section: "What do you provide?",
+      dependantAnswer: "Other (please describe)",
+      type: "text",
+      options: null,
+      helpText: "Please provide details about your specific goods or services so we can properly assess your eligibility under Section 6 of SOPA NSW."
+    },
+
+    // Section 6: Just a few more details
+    {
+      id: "Q13",
+      text: "Anything else you'd like to tell us? (optional)",
+      key: "additional_notes",
+      parent: null,
       section: "Just a few more details",
       dependantAnswer: null,
       type: "text",
