@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.22.0 (2025-11-19)
+
+
+### Features
+
+* add 'boolean' and 'number' types to question type definition in Questionnaire ([#30](https://github.com/sociable-tech/adj-types/issues/30)) ([1978106](https://github.com/sociable-tech/adj-types/commit/19781064e5b3b2efa924c74b6bc7e5fe21222e10))
+
 ### 1.21.5 (2025-11-17)
 
 ### 1.21.4 (2025-11-17)
