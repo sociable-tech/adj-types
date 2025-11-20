@@ -5013,7 +5013,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific2: Questionnair
       parent: "C1_mode",
       section: "About your payment claim",
       dependantAnswer: "Enter details manually",
-      type: "number",
+      type: "text",
       options: null,
       helpText: "Enter any reference number or identifier for your payment claim."
     },

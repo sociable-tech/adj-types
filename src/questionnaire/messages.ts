@@ -48,6 +48,7 @@ export const RESPONSE_MESSAGES = {
       description: 'Construction work falls outside NSW jurisdiction',
       recommendation: RECOMMENDATIONS.DISQUALIFICATION
     },
+    
     // Add new disqualifier types
     [DisqualifierType.NOT_CONSTRUCTION_RELATED]: {
       description: 'Contract is not related to construction work',
