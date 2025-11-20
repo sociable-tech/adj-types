@@ -5065,11 +5065,11 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific2: Questionnair
       id: "C2",
       text: "How much are you claiming?",
       key: "claimed_amount",
-      parent: "C1",
+      parent: null,
       section: "About your payment claim",
       dependantAnswer: null,
       type: "currency",
-      options: null,
+      options: null,  
       helpText: "Enter the total amount you're claiming for this work. This should include all work completed, materials supplied, and any other costs you're entitled to."
     },
     {
