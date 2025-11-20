@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.23.0 (2025-11-20)
+
+
+### Features
+
+* add 'boolean' and 'number' types to Question type definition ([0a0a70b](https://github.com/sociable-tech/adj-types/commit/0a0a70bfdf5608472cf9188b5f9c59d214352096))
+
 ## 1.22.0 (2025-11-19)
 
 
