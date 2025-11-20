@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.24.0 (2025-11-20)
+
+
+### Features
+
+* add seventh version of SOPA NSW Contract Eligibility Questionnaire with restructured sections and new questions ([#31](https://github.com/sociable-tech/adj-types/issues/31)) ([8651d2f](https://github.com/sociable-tech/adj-types/commit/8651d2ff942bbd8715bac44b653c9ec2abd429c7))
+
 ## 1.23.0 (2025-11-20)
 
 
