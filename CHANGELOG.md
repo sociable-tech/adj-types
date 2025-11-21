@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.26.4 (2025-11-21)
+
+
+### Bug Fixes
+
+* update parent reference for primary role question in comprehensive questionnaire ([#36](https://github.com/sociable-tech/adj-types/issues/36)) ([bdfbac8](https://github.com/sociable-tech/adj-types/commit/bdfbac85ffc7e3c28359d9a51b5b98c465304609))
+
 ### 1.26.3 (2025-11-21)
 
 ### 1.26.2 (2025-11-21)
