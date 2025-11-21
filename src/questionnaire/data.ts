@@ -2104,7 +2104,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
       id: "Q8",
       text: "What best describes your role in this construction project?",
       key: "primary_role",
-      parent: "Q",
+      parent: "Q3",
       section: "What do you provide?",
       dependantAnswer: "Yes",
       type: "boolean",
