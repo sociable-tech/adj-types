@@ -2149,7 +2149,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
       dependantAnswer: "I carry out construction work (building, alteration, repair, etc.)",
       type: "boolean",
       options: ["Yes", "No"],
-      helpText: "This helps determine if you are a 'Head Contractor' (works directly with the principal) or a 'Builder' (works under another contractor). This affects your rights and obligations under SOPA NSW."
+      helpText: "This helps determine if you are a 'Main Contractor' (works directly with the principal) or a 'Sub-Contractor' (works under another main-contractor). This affects your rights and obligations under SOPA NSW."
     },
     {
       id: "Q10",
@@ -2160,7 +2160,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
       dependantAnswer: "Yes",
       type: "boolean",
       options: ["Main contractor", "Subcontractor"],
-      helpText: "A 'Head Contractor' both works directly with the principal AND engages subcontractors. This distinction is important for determining your role classification under SOPA NSW."
+      helpText: "A 'Main Contractor' both works directly with the principal AND engages subcontractors. This distinction is important for determining your role classification under SOPA NSW."
     },
 
     // For s.6 Goods/Services Path
