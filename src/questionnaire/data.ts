@@ -4720,9 +4720,9 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific2: Questionnair
       id: "B1",
       text: "What's your business number (ABN or ACN)?",
       key: "abn_acn",
-      parent: "R1",
+      parent: null,
       section: "Builder requirements",
-      dependantAnswer: "Builder",
+      dependantAnswer: null,
       type: "text",
       options: null,
       helpText: "Your Australian Business Number (ABN) or Australian Company Number (ACN) is required for licensing verification and legal compliance under SOPA NSW."
@@ -4844,7 +4844,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific2: Questionnair
       parent: "B5_mode",
       section: "Builder requirements",
       dependantAnswer: "Enter details manually",
-      type: "number",
+      type: "text",
       options: null,
       helpText: "Enter your HBCF insurance policy number for verification purposes."
     },
