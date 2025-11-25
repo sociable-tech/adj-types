@@ -13,7 +13,7 @@ export enum RespondentDisqualifierTypePhase1 {
 }
 
 // Response messages for qualifications
-const RESPONDENT_QUALIFICATION_MESSAGES_PHASE1: Record<RespondentQualificationTypePhase1, { description: string; recommendation: string }> = {
+export const RESPONDENT_QUALIFICATION_MESSAGES_PHASE1: Record<RespondentQualificationTypePhase1, { description: string; recommendation: string }> = {
   [RespondentQualificationTypePhase1.PRE_CLAIM]: {
     description: 'You have a NSW construction-related project but have not yet received a Payment Claim. This is a pre-claim scenario where you can prepare for potential claims.',
     recommendation: 'Consider preparing your documentation and understanding your rights under SOPA NSW before a Payment Claim is served. You may want to complete a detailed assessment to understand your obligations.'
@@ -37,7 +37,7 @@ const RESPONDENT_QUALIFICATION_MESSAGES_PHASE1: Record<RespondentQualificationTy
 };
 
 // Response messages for disqualifiers
-const RESPONDENT_DISQUALIFIER_MESSAGES_PHASE1: Record<RespondentDisqualifierTypePhase1, { description: string; recommendation: string }> = {
+export const RESPONDENT_DISQUALIFIER_MESSAGES_PHASE1: Record<RespondentDisqualifierTypePhase1, { description: string; recommendation: string }> = {
   [RespondentDisqualifierTypePhase1.NOT_SOPA_NSW_CASE]: {
     description: 'This matter does not appear to fall under SOPA NSW jurisdiction. The project is either not located in NSW or does not relate to construction, building, or related services.',
     recommendation: 'SOPA NSW may not apply to your situation. If you believe this is incorrect, please review your answers or seek legal advice to determine the applicable legislation.'
@@ -45,7 +45,7 @@ const RESPONDENT_DISQUALIFIER_MESSAGES_PHASE1: Record<RespondentDisqualifierType
 };
 
 // Recommendations
-const RESPONDENT_RECOMMENDATIONS_PHASE1 = {
+export const RESPONDENT_RECOMMENDATIONS_PHASE1 = {
   QUALIFICATION: 'Based on your responses, SOPA NSW appears to apply to your situation. Consider completing a detailed assessment to understand your full rights and obligations.',
   DISQUALIFICATION: 'Based on your responses, SOPA NSW may not apply to your situation. Please review your answers or seek legal advice.',
 } as const;
@@ -146,7 +146,7 @@ export enum RespondentDisqualifierTypePhase2 {
 }
 
 // Response messages for qualifications
-const RESPONDENT_QUALIFICATION_MESSAGES_PHASE2: Record<RespondentQualificationTypePhase2, { description: string; recommendation: string }> = {
+export const RESPONDENT_QUALIFICATION_MESSAGES_PHASE2: Record<RespondentQualificationTypePhase2, { description: string; recommendation: string }> = {
   [RespondentQualificationTypePhase2.WITHIN_SOPA_NSW_SCOPE]: {
     description: 'The project is within NSW and involves construction-related work, falling under SOPA NSW jurisdiction.',
     recommendation: 'SOPA NSW applies to your situation. Ensure all statutory requirements are met.'
@@ -274,7 +274,7 @@ const RESPONDENT_QUALIFICATION_MESSAGES_PHASE2: Record<RespondentQualificationTy
 };
 
 // Response messages for disqualifiers
-const RESPONDENT_DISQUALIFIER_MESSAGES_PHASE2: Record<RespondentDisqualifierTypePhase2, { description: string; recommendation: string }> = {
+export const RESPONDENT_DISQUALIFIER_MESSAGES_PHASE2: Record<RespondentDisqualifierTypePhase2, { description: string; recommendation: string }> = {
   [RespondentDisqualifierTypePhase2.NOT_SOPA_NSW_CASE]: {
     description: 'This matter does not appear to fall under SOPA NSW jurisdiction. The project is either not located in NSW or does not relate to construction-related work.',
     recommendation: 'SOPA NSW may not apply. Review your situation or seek legal advice to determine applicable legislation.'
@@ -378,13 +378,13 @@ const RESPONDENT_DISQUALIFIER_MESSAGES_PHASE2: Record<RespondentDisqualifierType
 };
 
 // Recommendations
-const RESPONDENT_RECOMMENDATIONS_PHASE2 = {
+export const RESPONDENT_RECOMMENDATIONS_PHASE2 = {
   QUALIFICATION: 'Based on your responses, you appear to be in a position to manage your obligations under SOPA NSW. Continue to monitor deadlines and ensure compliance.',
   DISQUALIFICATION: 'Based on your responses, there are significant risks or issues with your SOPA NSW position. Seek legal advice immediately.',
 } as const;
 
 // Path evaluation result interface
-interface RespondentPathEvaluationResult {
+export interface RespondentPathEvaluationResult {
   pathId: string;
   pathName: string;
   eligible: boolean;
@@ -395,7 +395,7 @@ interface RespondentPathEvaluationResult {
 }
 
 // Parser response interface
-interface RespondentParserResponse {
+export interface RespondentParserResponse {
   eligible: boolean;
   score: number;
   qualifications: Record<string, { description: string; score: number }>;
