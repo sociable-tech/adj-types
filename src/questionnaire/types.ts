@@ -17,7 +17,7 @@ export type Questionnaire = {
     parent: string | null; // ID of the parent question, if any
     dependantAnswer: string | null; // The answer that triggers this question, if applicable
     type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date" | 'dropdown' | 'boolean' | 'number';
-    options: string[] | null; // Only for multiple-choice questions
+    options?: string[] | null; // Only for multiple-choice questions
     helpText?: string | null; // Optional help text for the question
   }[];
   createdAt: Date;
