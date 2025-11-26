@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.28.1 (2025-11-26)
+
+
+### Bug Fixes
+
+* update parent reference for quick payment status question in respondent questionnaire ([807d1c3](https://github.com/sociable-tech/adj-types/commit/807d1c30d85092246fe6f392d761bc143691b086))
+
 ## 1.28.0 (2025-11-26)
 
 
