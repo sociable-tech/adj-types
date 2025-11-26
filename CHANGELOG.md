@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.28.0 (2025-11-26)
+
+
+### Features
+
+* add detailed respondent questionnaire V2 for SOPA NSW ([6aa8433](https://github.com/sociable-tech/adj-types/commit/6aa8433867a4707003510ab7b5423f9edc95f9a9))
+
 ### 1.27.1 (2025-11-25)
 
 ## 1.27.0 (2025-11-25)
