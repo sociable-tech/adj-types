@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.28.4 (2025-11-26)
+
+
+### Bug Fixes
+
+* make options field optional in Question type ([dc78576](https://github.com/sociable-tech/adj-types/commit/dc785760e53527f74fe30c4d3a0f0a4bfb2d38ec))
+
 ### 1.28.3 (2025-11-26)
 
 ### 1.28.2 (2025-11-26)
