@@ -32,7 +32,7 @@ export type Question = {
   section: string | null
   dependantAnswer: string | null
   type: "multiple-choice" | "text" | "rating" | "file-or-text" | "file-upload" | "long-text" | "currency" | "date" | 'dropdown' | 'boolean' | 'number';
-  options: string[] | null
+  options?: string[] | null
   helpText?: string | null;
 }
 
