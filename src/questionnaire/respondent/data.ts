@@ -62,7 +62,7 @@ export const sopanswRespondentQuickQuestionnaire: Questionnaire = {
       parent: "Q4",
       dependantAnswer: "Yes",
       section: "Payment Status",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Less than the claimed amount",
         "The full claimed amount",
@@ -184,7 +184,7 @@ export const sopanswRespondentQuestionnaire2: Questionnaire = {
       parent: null,
       dependantAnswer: null,
       section: "Contract Details",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "New South Wales",
         "Another Australian state or territory",
@@ -262,7 +262,7 @@ export const sopanswRespondentQuestionnaire2: Questionnaire = {
       parent: "RC1",
       dependantAnswer: "Yes",
       section: "Payment Claim",
-      type: "multiple-choice",
+      type: "boolean",
       options: ["Upload the Payment Claim", "Enter details manually"],
       helpText: "You can upload the actual Payment Claim document or provide the details manually. Having the document helps verify compliance with SOPA NSW requirements and assess your response obligations."
     },
@@ -293,7 +293,7 @@ export const sopanswRespondentQuestionnaire2: Questionnaire = {
       parent: "RC1",
       dependantAnswer: "Yes",
       section: "Payment Claim",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Email",
         "Post",
@@ -356,7 +356,7 @@ export const sopanswRespondentQuestionnaire2: Questionnaire = {
       parent: "PS1",
       dependantAnswer: "Yes",
       section: "Payment Schedule",
-      type: "multiple-choice",
+      type: "boolean",
       options: ["Upload the Payment Schedule", "Enter details manually"],
       helpText: "You can upload your Payment Schedule document or provide the details manually. The Payment Schedule must comply with Section 14(2) requirements, including the scheduled amount and reasons for any reduction."
     },
@@ -387,7 +387,7 @@ export const sopanswRespondentQuestionnaire2: Questionnaire = {
       parent: "PS1",
       dependantAnswer: "Yes",
       section: "Payment Schedule",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Email",
         "Post",
@@ -488,7 +488,7 @@ export const sopanswRespondentQuestionnaire2: Questionnaire = {
       parent: "PM1",
       dependantAnswer: "No",
       section: "Payment Status",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Defective work",
         "Incomplete work",
@@ -520,7 +520,7 @@ export const sopanswRespondentQuestionnaire2: Questionnaire = {
       parent: "NS0",
       dependantAnswer: "Yes",
       section: "No Payment Schedule",
-      type: "multiple-choice",
+      type: "boolean",
       options: ["Upload the Notice of Intention", "Enter details manually"],
       helpText: "You can upload the Notice of Intention document or provide details manually. The Notice must comply with Section 17(1) requirements and gives you notice that the claimant intends to apply for adjudication."
     },
@@ -551,7 +551,7 @@ export const sopanswRespondentQuestionnaire2: Questionnaire = {
       parent: "NS0_mode",
       dependantAnswer: "Enter details manually",
       section: "No Payment Schedule",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Email",
         "Post",
@@ -603,7 +603,7 @@ export const sopanswRespondentQuestionnaire2: Questionnaire = {
       parent: "AD1",
       dependantAnswer: "Yes",
       section: "Adjudication Response",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Email",
         "Post",
@@ -752,7 +752,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: null,
       dependantAnswer: null,
       section: "Contract Details",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "New South Wales",
         "Another Australian state or territory",
@@ -767,7 +767,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: null,
       dependantAnswer: null,
       section: "Contract Details",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Building / construction work",
         "Civil or infrastructure work",
@@ -830,7 +830,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: "RC1",
       dependantAnswer: "Yes",
       section: "Payment Claim",
-      type: "multiple-choice",
+      type: "boolean",
       options: ["Upload the Payment Claim", "Enter details manually"],
       helpText: "You can upload the actual Payment Claim document or provide the details manually. Having the document helps verify compliance with SOPA NSW requirements and assess your response obligations."
     },
@@ -861,7 +861,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: "RC1",
       dependantAnswer: "Yes",
       section: "Payment Claim",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Email",
         "Post",
@@ -924,7 +924,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: "PS1",
       dependantAnswer: "Yes",
       section: "Payment Schedule",
-      type: "multiple-choice",
+      type: "boolean",
       options: ["Upload the Payment Schedule", "Enter details manually"],
       helpText: "You can upload your Payment Schedule document or provide the details manually. The Payment Schedule must comply with Section 14(2) requirements, including the scheduled amount and reasons for any reduction."
     },
@@ -955,7 +955,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: "PS1",
       dependantAnswer: "Yes",
       section: "Payment Schedule",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Email",
         "Post",
@@ -996,7 +996,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: "NS0",
       dependantAnswer: "Yes",
       section: "No Payment Schedule",
-      type: "multiple-choice",
+      type: "boolean",
       options: ["Upload the Notice of Intention", "Enter details manually"],
       helpText: "You can upload the Notice of Intention document or provide details manually. The Notice must comply with Section 17(1) requirements and gives you notice that the claimant intends to apply for adjudication."
     },
@@ -1027,7 +1027,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: "NS0_mode",
       dependantAnswer: "Enter details manually",
       section: "No Payment Schedule",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Email",
         "Post",
@@ -1045,7 +1045,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: "NS0",
       dependantAnswer: "Yes",
       section: "No Payment Schedule",
-      type: "multiple-choice",
+      type: "boolean",
       options: ["Yes", "No", "Not Yet"],
       helpText: "Even after receiving a Notice of Intention, you can still serve a Payment Schedule. However, the claimant may still proceed with adjudication. Serving a late Payment Schedule may limit your ability to dispute the claim in adjudication, but it's better than not serving one at all. Select 'Not Yet' if you plan to issue one but haven't yet."
     },
@@ -1079,7 +1079,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: "AD1",
       dependantAnswer: "Yes",
       section: "Adjudication Response",
-      type: "multiple-choice",
+      type: "boolean",
       options: [
         "Email",
         "Post",
