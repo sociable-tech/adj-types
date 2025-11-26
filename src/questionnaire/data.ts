@@ -2191,7 +2191,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
     },
     {
       id: "Q12",
-      text: "Please describe your category",
+      text: "Please describe your category?",
       key: "provider_category_other",
       parent: "Q11",
       section: "What do you provide?",
