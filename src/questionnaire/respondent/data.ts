@@ -59,12 +59,11 @@ export const sopanswRespondentQuickQuestionnaire: Questionnaire = {
       id: "Q5",
       text: "Compared with the amount claimed, how much have you paid so far?",
       key: "quick_payment_status",
-      parent: "Q3",
+      parent: "Q4",
       dependantAnswer: "Yes",
       section: "Payment Status",
       type: "multiple-choice",
       options: [
-        "Nothing",
         "Less than the claimed amount",
         "The full claimed amount",
         "More than the claimed amount"
