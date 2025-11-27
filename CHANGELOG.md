@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.28.5 (2025-11-27)
+
+
+### Bug Fixes
+
+* change question type from text to long-text for case information in respondent questionnaire ([dd18738](https://github.com/sociable-tech/adj-types/commit/dd18738f83a786323ef0bbdc0bbef6bf7a12cdcf))
+
 ### 1.28.4 (2025-11-26)
 
 
