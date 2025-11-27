@@ -730,7 +730,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       parent: null,
       dependantAnswer: null,
       section: "Case Information",
-      type: "text",
+      type: "long-text",
       helpText: "Provide a brief summary of the payment dispute, including the project details, work performed, and the nature of the disagreement. This helps assess your position under SOPA NSW."
     },
     {
