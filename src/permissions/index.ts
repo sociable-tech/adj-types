@@ -77,8 +77,7 @@ export const PERMISSIONS = [
 
 // ROLES constant for compatibility
 export const ROLES = {
-  CLAIMANT: UserRole.CLAIMANT,
-  RESPONDENT: UserRole.RESPONDENT,
+  CLIENT: UserRole.CLIENT,
   SERVICE_PROVIDER: UserRole.SERVICE_PROVIDER,
   ADMIN: UserRole.ADMIN,
 } as const;
@@ -90,7 +89,7 @@ export const getAllPermissions = (): string[] => PERMISSIONS;
 export const getAllRoles = (): string[] => USER_ROLES;
 
 export const ROLE_PERMISSIONS_MAP: Record<UserRole, Permission[]> = {
-  [UserRole.CLAIMANT]: [
+  [UserRole.CLIENT]: [
     Permission.CLAIMS_READ,
     Permission.CLAIMS_CREATE,
     Permission.CLAIMS_WRITE,            
@@ -100,11 +99,7 @@ export const ROLE_PERMISSIONS_MAP: Record<UserRole, Permission[]> = {
     Permission.DOCUMENTS_UPLOAD,
     Permission.PAYMENTS_READ,
     Permission.PROFILE_READ,
-    Permission.PROFILE_UPDATE
-  ],
-  [UserRole.RESPONDENT]: [
-    Permission.CLAIMS_READ,
-    Permission.CLAIMS_UPDATE,
+    Permission.PROFILE_UPDATE,
     Permission.CLAIMS_APPROVE,
     Permission.CLAIMS_REJECT,
     Permission.DOCUMENTS_READ,
@@ -136,13 +131,12 @@ export const ROLE_PERMISSIONS_MAP: Record<UserRole, Permission[]> = {
 };
 
 export function getPermissionsForRole(role: UserRole): Permission[] {
-  return ROLE_PERMISSIONS_MAP[role] || ROLE_PERMISSIONS_MAP[UserRole.CLAIMANT];
+  return ROLE_PERMISSIONS_MAP[role] || ROLE_PERMISSIONS_MAP[UserRole.CLIENT];
 }
 
 //Additional utility functions for compatibility
 export const getRolesList = (): Array<{ key: string; value: string; label: string }> => [
-  { key: 'CLAIMANT', value: UserRole.CLAIMANT, label: 'Claimant' },
-  { key: 'RESPONDENT', value: UserRole.RESPONDENT, label: 'Respondent' },
+  { key: 'CLIENT', value: UserRole.CLIENT, label: 'Client' },
   { key: 'SERVICE_PROVIDER', value: UserRole.SERVICE_PROVIDER, label: 'Service Provider' },
   { key: 'ADMIN', value: UserRole.ADMIN, label: 'Administrator' },
 ];
