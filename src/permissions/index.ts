@@ -90,23 +90,20 @@ export const getAllRoles = (): string[] => USER_ROLES;
 
 export const ROLE_PERMISSIONS_MAP: Record<UserRole, Permission[]> = {
   [UserRole.CLIENT]: [
+    // Merged permissions from both claimant and respondent
     Permission.CLAIMS_READ,
     Permission.CLAIMS_CREATE,
     Permission.CLAIMS_WRITE,            
     Permission.CLAIMS_UPDATE,
     Permission.CLAIMS_DELETE,
+    Permission.CLAIMS_APPROVE,      // From respondent
+    Permission.CLAIMS_REJECT,        // From respondent
     Permission.DOCUMENTS_READ,
     Permission.DOCUMENTS_UPLOAD,
+    Permission.DOCUMENTS_REVIEW,     // From respondent
     Permission.PAYMENTS_READ,
-    Permission.PROFILE_READ,
-    Permission.PROFILE_UPDATE,
-    Permission.CLAIMS_APPROVE,
-    Permission.CLAIMS_REJECT,
-    Permission.DOCUMENTS_READ,
-    Permission.DOCUMENTS_REVIEW,
-    Permission.PAYMENTS_READ,
-    Permission.PAYMENTS_PROCESS,
-    Permission.REPORTS_READ,
+    Permission.PAYMENTS_PROCESS,     // From respondent
+    Permission.REPORTS_READ,         // From respondent
     Permission.PROFILE_READ,
     Permission.PROFILE_UPDATE
   ],
