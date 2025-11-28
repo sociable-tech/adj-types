@@ -2057,7 +2057,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
       options: [
         "A loan, guarantee or indemnity agreement.",
         "The construction work or delivery of goods and services a condition of an agreement with a financial institution",
-        "not applicable"
+        "Not applicable"
       ],
       helpText: "Section 7(2) of SOPA NSW excludes contracts that are primarily financial in nature. These questions help determine if your contract falls under these exclusions."
     },
@@ -2084,7 +2084,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
     },
     {
       id: "Q7",
-      text: "Does the construction contract include any of the following types of work",
+      text: "Does the construction contract include any of the following types of work?",
       key: "construction_exclusions",
       parent: "Q6",
       section: "What is the nature of the construction work?",
