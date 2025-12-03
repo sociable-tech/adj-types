@@ -8,7 +8,7 @@ export const sopanswRespondentQuickQuestionnaire: Questionnaire = {
   questions: [
     {
       id: "Q1",
-      text: "Is the project located in New South Wales?",
+      text: "What is the jurisdiction of the arrangement?",
       key: "quick_project_in_nsw",
       parent: null,
       dependantAnswer: null,
@@ -45,6 +45,17 @@ export const sopanswRespondentQuickQuestionnaire: Questionnaire = {
       helpText: "A Payment Claim under SOPA NSW (Section 13) is a formal document that identifies the work/goods/services and states a claimed amount. If you receive one, you must respond within 10 business days with a Payment Schedule or pay the full claimed amount, otherwise you may lose your right to dispute the claim."
     },
     {
+      id: "Q3a",
+      text: "When did you receive the Payment Claim?",
+      key: "quick_payment_claim_received_date",
+      parent: "Q3",
+      dependantAnswer: "Yes",
+      section: "Payment Claim",
+      type: "date",
+      options: null,
+      helpText: "The date you received the Payment Claim helps determine your response deadlines. You have 10 business days from this date to serve a Payment Schedule."
+    },
+    {
       id: "Q4",
       text: "Have you sent a written response stating how much you will pay (a Payment Schedule or similar)?",
       key: "quick_issued_payment_schedule",
@@ -54,6 +65,17 @@ export const sopanswRespondentQuickQuestionnaire: Questionnaire = {
       type: "boolean",
       options: ["Yes", "No"],
       helpText: "A Payment Schedule (Section 14) is your written response to a Payment Claim. You must serve it within 10 business days of receiving the Payment Claim. If you don't serve a Payment Schedule and don't pay the full amount, the claimant can apply for adjudication and you may be liable for the full claimed amount plus interest."
+    },
+    {
+      id: "Q4a",
+      text: "When did you issue the Payment Schedule?",
+      key: "quick_payment_schedule_issued_date",
+      parent: "Q4",
+      dependantAnswer: "Yes",
+      section: "Payment Schedule",
+      type: "date",
+      options: null,
+      helpText: "The date you issued the Payment Schedule helps verify if it was served within the required 10 business days."
     },
     {
       id: "Q5",
@@ -724,16 +746,6 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
       helpText: "Give your case a clear name for easy identification. This helps with record-keeping and case management throughout the SOPA NSW process."
     },
     {
-      id: "CASE2",
-      text: "Case description",
-      key: "case_description",
-      parent: null,
-      dependantAnswer: null,
-      section: "Case Information",
-      type: "long-text",
-      helpText: "Provide a brief summary of the payment dispute, including the project details, work performed, and the nature of the disagreement. This helps assess your position under SOPA NSW."
-    },
-    {
       id: "CASE3",
       text: "Claimant name or business name",
       key: "claimant_name",
@@ -856,7 +868,7 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
     },
     {
       id: "RC1b",
-      text: "How was the Payment Claim served?",
+      text: "How did you receive the Payment Claim?",
       key: "payment_claim_service_method",
       parent: "RC1",
       dependantAnswer: "Yes",
@@ -1157,4 +1169,4 @@ export const sopanswRespondentQuestionnaire3: Questionnaire = {
   version: "2.6.0",
   isActive: true,
   isPublic: true
-};  
+};   

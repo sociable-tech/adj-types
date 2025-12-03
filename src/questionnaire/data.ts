@@ -5379,3 +5379,745 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific2: Questionnair
   isActive: true,
   isPublic: true
 };
+
+// Removed Case description from Case related questions
+export const sopanswPhase2QuestionnaireContractualAndDateSpecific3: Questionnaire = {
+  id: "sopa-nsw-phase-2-enhanced",
+  title: "Phase 2 - Payment Claim Validation (Enhanced)",
+  description: "This questionnaire helps validate your payment claim under SOPA NSW and ensures all legal requirements are met before proceeding with your case.",
+  questions: [
+    // A. Role Path Identification
+    {
+      id: "R1",
+      text: "What's your role in this construction project?",
+      key: "role",
+      parent: null,
+      section: "What's your role?",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Builder", "Contractor", "Head Contractor"],
+      helpText: "Your role determines which SOPA NSW requirements apply to your payment claim. Builders work directly with property owners, Contractors work under other contractors, and Head Contractors manage multiple subcontractors."
+    },
+
+    {
+      id: "CONTRACT1",
+      text: "When did your contract start?",
+      key: "contract_start_date",
+      parent: null,
+      section: "Contract Information",
+      dependantAnswer: null,
+      type: "date",
+      options: null,
+      helpText: "Enter the date when your construction contract officially began."
+    },
+    {
+      id: "CONTRACT2",
+      text: "Has your contract been completed?",
+      key: "contract_completed",
+      parent: "CONTRACT1",
+      section: "Contract Information",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Yes", "No", "Ongoing"],
+      helpText: "Select whether your contract has been completed."
+    },
+    {
+      id: "CONTRACT2a",
+      text: "When was your contract completed?",
+      key: "contract_completion_date",
+      parent: "CONTRACT2",
+      section: "Contract Information",
+      dependantAnswer: "Yes",
+      type: "date",
+      options: null,
+      helpText: "Enter the date when all work under the contract was completed."
+    },
+    
+    // Case Information
+    {
+      id: "CASE1",
+      text: "What would you like to call this case?",
+      key: "case_title",
+      parent: null,
+      section: "Tell us about your case",
+      dependantAnswer: null,
+      type: "text",
+      options: null,
+      helpText: "Give your case a clear name so you can easily identify it later. This helps with record-keeping and case management."
+    },
+    {
+      id: "CASE3",
+      text: "Who are you making this claim against? (Respondent's name)",
+      key: "respondent_name",
+      parent: "CASE1",
+      section: "Tell us about your case",
+      dependantAnswer: null,
+      type: "text",
+      options: null,
+      helpText: "Enter the name of the person or company you're claiming payment from. This is the 'respondent' in your SOPA NSW case."
+    },
+
+    // --- BUILDER path prerequisites ---
+    {
+      id: "B1",
+      text: "What's your business number (ABN or ACN)?",
+      key: "abn_acn",
+      parent: null,
+      section: "Builder requirements",
+      dependantAnswer: null,
+      type: "text",
+      options: null,
+      helpText: "Your Australian Business Number (ABN) or Australian Company Number (ACN) is required for licensing verification and legal compliance under SOPA NSW."
+    },
+    {
+      id: "B2_mode",
+      text: "How would you like to provide your NSW building licence?",
+      key: "builder_licence_mode",
+      parent: "R1",
+      section: "Builder requirements",
+      dependantAnswer: "Builder",
+      type: "boolean",
+      options: ["Upload", "Enter details manually"],
+      helpText: "NSW building licences are required for all building work. You can upload your licence document or enter the details manually for verification."
+    },
+    {
+      id: "B2",
+      text: "Upload your NSW building licence",
+      key: "builder_licence_file",
+      parent: "B2_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Upload",
+      type: "file-upload",
+      options: null,
+      helpText: "Upload a clear photo or PDF of your NSW building licence. This helps verify your eligibility to make payment claims under SOPA NSW."
+    },
+    {
+      id: "B2a",
+      text: "What's your NSW building licence number?",
+      key: "builder_licence_number",
+      parent: "B2_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Enter details manually",
+      type: "text",
+      options: null,
+      helpText: "Enter your NSW building licence number exactly as it appears on your licence document."
+    },
+    {
+      id: "B2b",
+      text: "Who is the licence holder?",
+      key: "builder_licence_holder",
+      parent: "B2_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Enter details manually",
+      type: "text",
+      options: null,
+      helpText: "Enter the full name of the person or company that holds the building licence."
+    },
+    {
+      id: "B2c",
+      text: "What type of building work can you do? (optional)",
+      key: "builder_licence_class",
+      parent: "B2_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Enter details manually",
+      type: "text",
+      options: null,
+      helpText: "Enter your licence class if you know it (e.g., 'Residential Builder', 'Commercial Builder'). This helps verify the scope of work you're licensed to perform."
+    },
+    {
+      id: "B2d",
+      text: "When does your licence expire? (optional)",
+      key: "builder_licence_expiry",
+      parent: "B2_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Enter details manually",
+      type: "date",
+      options: null,
+      helpText: "Enter the expiry date of your building licence. A valid licence is required to make payment claims under SOPA NSW."
+    },
+    {
+      id: "B3",
+      text: "Is your building contract properly licensed under NSW rules?",
+      key: "hba_s4_compliance",
+      parent: "R1",
+      section: "Builder requirements",
+      dependantAnswer: "Builder",
+      type: "boolean",
+      options: ["Yes", "No", "Unsure"],
+      helpText: "The Home Building Act 1989 requires all building contracts to be properly licensed. This ensures your contract is legally valid and eligible for SOPA NSW protection."
+    },
+    {
+      id: "B4",
+      text: "Is this residential building work?",
+      key: "is_residential",
+      parent: "R1",
+      section: "Builder requirements",
+      dependantAnswer: "Builder",
+      type: "boolean",
+      options: ["Yes", "No"],
+      helpText: "Residential building work has additional insurance requirements under the Home Building Act. This affects your SOPA NSW eligibility and documentation needs."
+    },
+    {
+      id: "B5_mode",
+      text: "How will you provide your home building insurance?",
+      key: "hba_s92_mode",
+      parent: "B4",
+      section: "Builder requirements",
+      dependantAnswer: "Yes",
+      type: "boolean",
+      options: ["Upload", "Enter details manually"],
+      helpText: "Home Building Compensation Fund (HBCF) insurance is required for all residential building work over $20,000. This protects homeowners and is required for SOPA NSW eligibility."
+    },
+    {
+      id: "B5",
+      text: "Upload your home building insurance certificate",
+      key: "hba_s92_insurance",
+      parent: "B5_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Upload",
+      type: "file-upload",
+      options: null,
+      helpText: "Upload your HBCF insurance certificate. This proves you have the required insurance for residential building work under the Home Building Act."
+    },
+    {
+      id: "B5a",
+      text: "What's your insurance policy number?",
+      key: "hba_s92_policy_number",
+      parent: "B5_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Enter details manually",
+      type: "text",
+      options: null,
+      helpText: "Enter your HBCF insurance policy number for verification purposes."
+    },
+    {
+      id: "B5b",
+      text: "Which insurance company issued your policy?",
+      key: "hba_s92_insurer",
+      parent: "B5_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Enter details manually",
+      type: "text",
+      options: null,
+      helpText: "Enter the name of the insurance company that issued your HBCF policy."
+    },
+    {
+      id: "B5c",
+      text: "When does your insurance coverage start?",
+      key: "hba_s92_coverage_from",
+      parent: "B5_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Enter details manually",
+      type: "date",
+      options: null,
+      helpText: "Enter the start date of your HBCF insurance coverage period."
+    },
+    {
+      id: "B5d",
+      text: "When does your insurance coverage end?",
+      key: "hba_s92_coverage_to",
+      parent: "B5_mode",
+      section: "Builder requirements",
+      dependantAnswer: "Enter details manually",
+      type: "date",
+      options: null,
+      helpText: "Enter the end date of your HBCF insurance coverage period."
+    },
+    {
+      id: "B6",
+      text: "Do you have a valid reference date for progress payments?",
+      key: "s8_2_reference_date",
+      parent: "R1",
+      section: "Builder requirements",
+      dependantAnswer: "Builder",
+      type: "boolean",
+      options: ["Yes", "No", "Unsure"],
+      helpText: "A reference date is when you can make a payment claim under SOPA NSW. This is usually the end of each month or as specified in your contract."
+    },
+
+    // --- HEAD CONTRACTOR Supporting Statement ---
+    {
+      id: "HC0_mode",
+      text: "How will you provide your Supporting Statement?",
+      key: "ss_mode",
+      parent: "R1",
+      section: "Head Contractor requirements",
+      dependantAnswer: "Head Contractor",
+      type: "boolean",
+      options: ["Upload", "Enter details manually"],
+      helpText: "Head Contractors must provide a Supporting Statement with their payment claims. This confirms subcontractors have been paid and is required under SOPA NSW s.13(7) and (9)."
+    },
+    {
+      id: "HC1",
+      text: "Upload your Supporting Statement",
+      key: "supporting_statement_file",
+      parent: "HC0_mode",
+      section: "Head Contractor requirements",
+      dependantAnswer: "Upload",
+      type: "file-upload",
+      options: null,
+      helpText: "Upload your completed Supporting Statement form. This must be the official form approved by NSW Fair Trading and must relate to your specific payment claim."
+    },
+    {
+      id: "HC1a",
+      text: "When was the Supporting Statement signed?",
+      key: "ss_date",
+      parent: "HC0_mode",
+      section: "Head Contractor requirements",
+      dependantAnswer: "Enter details manually",
+      type: "date",
+      options: null,
+      helpText: "Enter the date when the Supporting Statement was signed. This must be recent and relate to your current payment claim."
+    },
+    {
+      id: "HC1b",
+      text: "Who signed the Supporting Statement?",
+      key: "ss_signer_name",
+      parent: "HC0_mode",
+      section: "Head Contractor requirements",
+      dependantAnswer: "Enter details manually",
+      type: "text",
+      options: null,
+      helpText: "Enter the full name of the person who signed the Supporting Statement. This should be an authorized representative of your company."
+    },
+    {
+      id: "HC1c",
+      text: "What's the signer's position or title?",
+      key: "ss_signer_position",
+      parent: "HC0_mode",
+      section: "Head Contractor requirements",
+      dependantAnswer: "Enter details manually",
+      type: "text",
+      options: null,
+      helpText: "Enter the position or title of the person who signed the Supporting Statement (e.g., 'Director', 'Manager', 'Authorized Representative')."
+    },
+    {
+      id: "HC1d",
+      text: "What's the reference for this payment claim?",
+      key: "ss_claim_reference",
+      parent: "HC0_mode",
+      section: "Head Contractor requirements",
+      dependantAnswer: "Enter details manually",
+      type: "text",
+      options: null,
+      helpText: "Enter the claim number, period, or project reference that this Supporting Statement relates to."
+    },
+    {
+      id: "HC2",
+      text: "I confirm the Supporting Statement is true and subcontractors have been paid",
+      key: "ss_truth_declaration",
+      parent: "HC0_mode",
+      section: "Head Contractor requirements",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["I acknowledge and declare"],
+      helpText: "By selecting this option, you declare that the Supporting Statement is true and that all subcontractors have been paid the amounts due to them."
+    },
+
+    // --- COMMON Payment Claim ---
+    {
+      id: "C0",
+      text: "Have you already sent a payment claim for this work?",
+      key: "payment_claim_served",
+      parent: null,
+      section: "About your payment claim",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Yes", "No"],
+      helpText: "A payment claim is the formal document you send to request payment. If you've already sent one, we'll need to see it to validate your case."
+    },
+    {
+      id: "C1_mode",
+      text: "How will you provide your payment claim?",
+      key: "payment_claim_mode",
+      parent: "C0",
+      section: "About your payment claim",
+      dependantAnswer: "Yes",
+      type: "boolean",
+      options: ["Upload", "Enter details manually"],
+      helpText: "You can upload your payment claim document or provide the details manually. Having the actual document helps with case validation."
+    },
+    {
+      id: "C1a",
+      text: "Upload your payment claim",
+      key: "payment_claim_file",
+      parent: "C1_mode",
+      section: "About your payment claim",
+      dependantAnswer: "Upload",
+      type: "file-upload",
+      options: null,
+      helpText: "Upload a clear photo or PDF of the payment claim you sent. This helps verify that your claim meets SOPA NSW requirements."
+    },
+    {
+      id: "C1m1",
+      text: "What's your claim number or reference?",
+      key: "claim_number",
+      parent: "C1_mode",
+      section: "About your payment claim",
+      dependantAnswer: "Enter details manually",
+      type: "text",
+      options: null,
+      helpText: "Enter any reference number or identifier for your payment claim."
+    },
+    {
+      id: "C1m2",
+      text: "When did your claim period start?",
+      key: "claim_period_from",
+      parent: "C1_mode",
+      section: "About your payment claim",
+      dependantAnswer: "Enter details manually",
+      type: "date",
+      options: null,
+      helpText: "Enter the start date of the work period covered by this payment claim."
+    },
+    {
+      id: "C1m3",
+      text: "When did your claim period end?",
+      key: "claim_period_to",
+      parent: "C1_mode",
+      section: "About your payment claim",
+      dependantAnswer: "Enter details manually",
+      type: "date",
+      options: null,
+      helpText: "Enter the end date of the work period covered by this payment claim."
+    },
+    {
+      id: "C1",
+      text: "What work does this claim cover?",
+      key: "claim_scope",
+      parent: "C0",
+      section: "About your payment claim",
+      dependantAnswer: "Yes",
+      type: "long-text",
+      options: null,
+      helpText: "Describe the construction work, goods, or services that this payment claim covers. Be specific about what was completed and when."
+    },
+    {
+      id: "C1b",
+      text: "When did you last perform work or supply goods under this contract?",
+      key: "last_work_date",
+      parent: "C1",
+      section: "About your payment claim",
+      dependantAnswer: null,
+      type: "date",
+      options: null,
+      helpText: "Claims must be served within 12 months of your last work/supply date under SOPA NSW s.13(4)."
+    },
+    {
+      id: "C2",
+      text: "How much are you claiming?",
+      key: "claimed_amount",
+      parent: null,
+      section: "About your payment claim",
+      dependantAnswer: null,
+      type: "currency",
+      options: null,  
+      helpText: "Enter the total amount you're claiming for this work. This should include all work completed, materials supplied, and any other costs you're entitled to."
+    },
+    {
+      id: "C2a",
+      text: "When was payment due under your contract?",
+      key: "payment_due_date",
+      parent: "C2",
+      section: "About your payment claim",
+      dependantAnswer: null,
+      type: "date",
+      options: null,
+      helpText: "Payment claims cannot be served before the payment due date under SOPA NSW."
+    },
+    {
+      id: "C3",
+      text: "How did you calculate this amount?",
+      key: "amount_basis",
+      parent: "C2",
+      section: "About your payment claim",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Per contract terms", "Value of work/goods/services provided"],
+      helpText: "Select how you calculated the claimed amount. This helps verify that your claim is based on valid pricing under your contract or the value of work performed."
+    },
+    {
+      id: "C4_mode",
+      text: "How will you provide your calculations?",
+      key: "calculation_support_mode",
+      parent: "C3",
+      section: "About your payment claim",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Upload", "Enter details manually"],
+      helpText: "Supporting calculations help verify your claimed amount. You can upload invoices, timesheets, or other documents, or provide the details manually."
+    },
+    {
+      id: "C4",
+      text: "Upload your supporting calculations",
+      key: "calculation_support_file",
+      parent: "C4_mode",
+      section: "About your payment claim",
+      dependantAnswer: "Upload",
+      type: "file-upload",
+      options: null,
+      helpText: "Upload invoices, timesheets, receipts, or other documents that support your claimed amount."
+    },
+    {
+      id: "C4a",
+      text: "Please describe your calculations",
+      key: "calculation_support_text",
+      parent: "C4_mode",
+      section: "About your payment claim",
+      dependantAnswer: "Enter details manually",
+      type: "long-text",
+      options: null,
+      helpText: "Explain how you calculated the claimed amount, including hours worked, materials used, rates applied, and any other relevant details."
+    },
+    {
+      id: "C5",
+      text: "Does your claim include any extra costs?",
+      key: "includes_s13_3",
+      parent: "C3",
+      section: "About your payment claim",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Yes", "No"],
+      helpText: "Extra costs might include suspension costs, retention amounts, or other costs allowed under SOPA NSW s.13(3)."
+    },
+    {
+      id: "C5a",
+      text: "Please explain the extra costs",
+      key: "s13_3_details",
+      parent: "C5",
+      section: "About your payment claim",
+      dependantAnswer: "Yes",
+      type: "long-text",
+      options: null,
+      helpText: "Describe what extra costs you've included in your claim and why you're entitled to them under your contract or SOPA NSW."
+    },
+
+    // --- Timing & Service ---
+    {
+      id: "T1",
+      text: "When did you send your payment claim?",
+      key: "claim_service_date",
+      parent: "C0",
+      section: "When and how was your claim sent?",
+      dependantAnswer: "Yes",
+      type: "date",
+      options: null,
+      helpText: "Enter the date when you sent your payment claim to the respondent. This is important for timing requirements under SOPA NSW."
+    },
+    {
+      id: "T2",
+      text: "Did your contract specify an earlier reference date?",
+      key: "earlier_named_month",
+      parent: "T1",
+      section: "When and how was your claim sent?",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Yes", "No", "Not sure"],
+      helpText: "Some contracts specify different reference dates for payment claims. This affects when you can make claims under SOPA NSW."
+    },
+    {
+      id: "T3",
+      text: "Has your contract been ended or cancelled?",
+      key: "contract_terminated",
+      parent: "T1",
+      section: "When and how was your claim sent?",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Yes", "No"],
+      helpText: "If your contract has been terminated, this affects your rights under SOPA NSW and may change the timing requirements for your payment claim."
+    },
+    {
+      id: "T3a",
+      text: "When was the contract terminated?",
+      key: "termination_date",
+      parent: "T3",
+      section: "When and how was your claim sent?",
+      dependantAnswer: "Yes",
+      type: "date",
+      options: null,
+      helpText: "Enter the date when your contract was terminated. This is important for determining your rights under SOPA NSW."
+    },
+    {
+      id: "T4",
+      text: "Is this your only payment claim for this month?",
+      key: "single_claim_month",
+      parent: "T1",
+      section: "When and how was your claim sent?",
+      dependantAnswer: null,
+      type: "boolean",
+      options: ["Yes", "No"],
+      helpText: "SOPA NSW generally allows only one payment claim per month, unless specific exceptions apply."
+    },
+    {
+      id: "T4a",
+      text: "Which exception applies to your situation?",
+      key: "multi_claim_exception",
+      parent: "T4",
+      section: "When and how was your claim sent?",
+      dependantAnswer: "No",
+      type: "multiple-choice",
+      options: [
+        "One claim covering more than one progress payment",
+        "Including an amount previously claimed",
+        "Claim for previous month's work"
+      ],
+      helpText: "SOPA NSW allows multiple claims in certain circumstances. Select the exception that applies to your situation."
+    },
+    {
+      id: "T4b",
+      text: "When did you send your previous payment claim for this contract?",
+      key: "previous_claim_date",
+      parent: "T4",
+      section: "When and how was your claim sent?",
+      dependantAnswer: "No",
+      type: "date",
+      options: null,
+      helpText: "Enter the date of your previous claim to verify you're not making duplicate claims in the same month."
+    },
+    {
+      id: "T5",
+      text: "How did you send your claim?",
+      key: "service_method",
+      parent: "T1",
+      section: "When and how was your claim sent?",
+      dependantAnswer: null,
+      type: "text",
+      options: null,
+      helpText: "Describe how you sent your payment claim (e.g., email, post, hand delivery) and who you sent it to."
+    },
+
+    // --- Payment Schedule ---
+    {
+      id: "PS1",
+      text: "Did the respondent send you a Payment Schedule?",
+      key: "payment_schedule_received",
+      parent: "C0",
+      section: "What happened after you sent your claim?",
+      dependantAnswer: "Yes",
+      type: "boolean",
+      options: ["Yes", "No"],
+      helpText: "A Payment Schedule is the respondent's response to your payment claim. They must send one within 10 business days or pay the full amount."
+    },
+    {
+      id: "PS_mode",
+      text: "How will you provide the Payment Schedule?",
+      key: "payment_schedule_mode",
+      parent: "PS1",
+      section: "What happened after you sent your claim?",
+      dependantAnswer: "Yes",
+      type: "boolean",
+      options: ["Upload", "Enter details manually"],
+      helpText: "You can upload the Payment Schedule document or provide the details manually. Having the actual document helps with case validation."
+    },
+    {
+      id: "PS2",
+      text: "Upload the Payment Schedule",
+      key: "payment_schedule_file",
+      parent: "PS_mode",
+      section: "What happened after you sent your claim?",
+      dependantAnswer: "Upload",
+      type: "file-upload",
+      options: null,
+      helpText: "Upload a clear photo or PDF of the Payment Schedule you received from the respondent."
+    },
+    {
+      id: "PS2a",
+      text: "When did you receive the Payment Schedule?",
+      key: "ps_date_served",
+      parent: "PS_mode",
+      section: "What happened after you sent your claim?",
+      dependantAnswer: "Enter details manually",
+      type: "date",
+      options: null,
+      helpText: "Enter the date when you received the Payment Schedule. This is important for timing requirements under SOPA NSW."
+    },
+    {
+      id: "PS2b",
+      text: "How much did they agree to pay?",
+      key: "ps_scheduled_amount",
+      parent: "PS_mode",
+      section: "What happened after you sent your claim?",
+      dependantAnswer: "Enter details manually",
+      type: "currency",
+      options: null,
+      helpText: "Enter the amount the respondent agreed to pay in their Payment Schedule."
+    },
+    {
+      id: "PS2c",
+      text: "What reasons did they give?",
+      key: "ps_reasons",
+      parent: "PS_mode",
+      section: "What happened after you sent your claim?",
+      dependantAnswer: "Enter details manually",
+      type: "long-text",
+      options: null,
+      helpText: "Describe the reasons the respondent gave for not paying the full amount, or for any deductions they made."
+    },
+
+    // --- Adjudication Notice ---
+    {
+      id: "N1",
+      text: "Did you send a Notice of Intention to apply for adjudication?",
+      key: "adjudication_notice_given",
+      parent: "PS1",
+      section: "Notice of Intention",
+      dependantAnswer: "No",
+      type: "boolean",
+      options: ["Yes", "No"],
+      helpText: "If the respondent didn't send a Payment Schedule or didn't pay the scheduled amount, you can apply for adjudication. You must first send a Notice of Intention."
+    },
+    {
+      id: "N_mode",
+      text: "How will you provide your Notice of Intention?",
+      key: "notice_mode",
+      parent: "N1",
+      section: "Notice of Intention",
+      dependantAnswer: "Yes",
+      type: "boolean",
+      options: ["Upload", "Enter details manually"],
+      helpText: "You can upload your Notice of Intention document or provide the details manually."
+    },
+    {
+      id: "N2",
+      text: "When did you send the Notice of Intention?",
+      key: "notice_date",
+      parent: "N_mode",
+      section: "Notice of Intention",
+      dependantAnswer: "Enter details manually",
+      type: "date",
+      options: null,
+      helpText: "Enter the date when you sent your Notice of Intention to apply for adjudication."
+    },
+    {
+      id: "N2a",
+      text: "Upload your Notice of Intention (optional)",
+      key: "notice_file",
+      parent: "N_mode",
+      section: "Notice of Intention",
+      dependantAnswer: "Upload",
+      type: "file-upload",
+      options: null,
+      helpText: "Upload your Notice of Intention document if you have it available."
+    },
+    {
+      id: "N2b",
+      text: "How did you send the Notice of Intention?",
+      key: "notice_service_details",
+      parent: "N_mode",
+      section: "Notice of Intention",
+      dependantAnswer: "Enter details manually",
+      type: "long-text",
+      options: null,
+      helpText: "Describe how you sent the Notice of Intention (e.g., email, post, hand delivery) and who you sent it to."
+    }
+  ],
+  createdAt: new Date("2025-09-11T12:00:00Z"),
+  updatedAt: new Date("2025-09-11T12:00:00Z"),
+  country: "Australia",
+  state: "NSW",
+  jurisdiction: "SOPA NSW",
+  tags: ["eligibility", "construction", "contract", "sopa", "nsw", "enhanced", "phase2"],
+  version: "6.0.0",
+  isActive: true,
+  isPublic: true
+};
