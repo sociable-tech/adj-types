@@ -5981,9 +5981,16 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific3: Questionnair
       parent: "T1",
       section: "When and how was your claim sent?",
       dependantAnswer: null,
-      type: "text",
-      options: null,
-      helpText: "Describe how you sent your payment claim (e.g., email, post, hand delivery) and who you sent it to."
+      type: "boolean",
+      options: [
+        "Email",
+        "Post",
+        "Fax",
+        "Hand delivery",
+        "As specified in the contract",
+        "Other"
+      ],
+      helpText: "The method of service affects when the Payment Claim is considered 'received' under SOPA NSW. Service must comply with the contract terms or SOPA NSW service rules (Section 31) for the claim to be valid."
     },
 
     // --- Payment Schedule ---
@@ -6106,9 +6113,16 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific3: Questionnair
       parent: "N_mode",
       section: "Notice of Intention",
       dependantAnswer: "Enter details manually",
-      type: "long-text",
-      options: null,
-      helpText: "Describe how you sent the Notice of Intention (e.g., email, post, hand delivery) and who you sent it to."
+      type: "boolean",
+      options: [
+        "Email",
+        "Post",
+        "Fax",
+        "Hand delivery",
+        "As specified in the contract",
+        "Other"
+      ],
+      helpText: "The Notice of Intention must be served in accordance with the contract terms or SOPA NSW service rules (Section 31). Proper service is required for the Notice to be valid and for you to proceed with adjudication."
     }
   ],
   createdAt: new Date("2025-09-11T12:00:00Z"),
