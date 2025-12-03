@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.30.1 (2025-12-03)
+
+
+### Bug Fixes
+
+* update options for boolean question in respondent questionnaire to reflect jurisdictional specificity ([201bed8](https://github.com/sociable-tech/adj-types/commit/201bed8745851568f7daa0092ea888ae63cdeede))
+
 ## 1.30.0 (2025-12-03)
 
 
