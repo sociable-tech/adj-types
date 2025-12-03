@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.29.0 (2025-12-03)
+
+
+### Features
+
+* enhance questionnaires by adding new questions and updating existing ones ([#42](https://github.com/sociable-tech/adj-types/issues/42)) ([4f40c95](https://github.com/sociable-tech/adj-types/commit/4f40c95e50c31de1429838d4f4beb34383108187))
+
 ### 1.28.7 (2025-11-28)
 
 ### 1.28.6 (2025-11-28)
