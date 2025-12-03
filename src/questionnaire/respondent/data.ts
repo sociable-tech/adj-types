@@ -14,7 +14,7 @@ export const sopanswRespondentQuickQuestionnaire: Questionnaire = {
       dependantAnswer: null,
       section: "Project",
       type: "boolean",
-      options: ["Yes", "No"],
+      options: ["Yes - NSW", "No - Other Jurisdiction"],
       helpText: "SOPA NSW only applies to construction work or supply of goods/services that are carried out in New South Wales, as per Section 7(4) of the Act. If the work is outside NSW, different security of payment legislation may apply."
     },
     {
