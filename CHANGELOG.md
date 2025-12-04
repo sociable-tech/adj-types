@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.31.0 (2025-12-04)
+
+
+### Features
+
+* add ORGANIZATION_MANAGER role and permissions to user roles and permissions map ([#44](https://github.com/sociable-tech/adj-types/issues/44)) ([45e57de](https://github.com/sociable-tech/adj-types/commit/45e57deed811742091995609cc2960ed2ef3bd41))
+
 ### 1.30.1 (2025-12-03)
 
 
