@@ -1,13 +1,15 @@
 export enum UserRole {
   CLIENT = 'client',
   SERVICE_PROVIDER = 'service_provider',
-  ADMIN = 'admin'
+  ADMIN = 'admin',
+  ORGANIZATION_MANAGER = 'organization_manager'
 }
 
 export const USER_ROLES = [
   UserRole.CLIENT,
   UserRole.SERVICE_PROVIDER,
-  UserRole.ADMIN
+  UserRole.ADMIN,
+  UserRole.ORGANIZATION_MANAGER
 ];
 
 export interface User {
