@@ -124,6 +124,9 @@ export const ROLE_PERMISSIONS_MAP: Record<UserRole, Permission[]> = {
   ],
   [UserRole.ADMIN]: [
     ...PERMISSIONS,
+  ],
+  [UserRole.ORGANIZATION_MANAGER]: [
+    ...PERMISSIONS,
   ]
 };
 
@@ -136,6 +139,7 @@ export const getRolesList = (): Array<{ key: string; value: string; label: strin
   { key: 'CLIENT', value: UserRole.CLIENT, label: 'Client' },
   { key: 'SERVICE_PROVIDER', value: UserRole.SERVICE_PROVIDER, label: 'Service Provider' },
   { key: 'ADMIN', value: UserRole.ADMIN, label: 'Administrator' },
+  { key: 'ORGANIZATION_MANAGER', value: UserRole.ORGANIZATION_MANAGER, label: 'Organization Manager' },
 ];
 
 export const getPermissionsList = (): Array<{ key: string; value: string; label: string; category: string }> => [
