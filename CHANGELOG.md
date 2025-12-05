@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.32.0 (2025-12-05)
+
+
+### Features
+
+* add new SOPA NSW questionnaires for payment claim validation and respondent assessment ([317a588](https://github.com/sociable-tech/adj-types/commit/317a588c4d52ef812d87d4f1af1599062cb575de))
+
 ## 1.31.0 (2025-12-04)
 
 
