@@ -2120,7 +2120,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
       id: "Q8a",
       text: "Have you already served a payment claim for this work?",
       key: "payment_claim_served",
-      parent: "Q8", // CORRECTED: Depends on Q8 (role determination)
+      parent: null, // CORRECTED: Depends on Q8 (role determination)
       section: "Payment Claim Information",
       dependantAnswer: null, // Shows after Q8 regardless of path
       type: "boolean",
@@ -2134,7 +2134,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
       parent: "Q8a",
       section: "Payment Claim Information",
       dependantAnswer: "Yes",
-      type: "text",
+      type: "number",
       options: null,
       helpText: "Enter the total amount you're claiming for this work. This should include all work completed, materials supplied, and any other costs you're entitled to. This information will be used to prefill Phase 2 forms."
     },
@@ -6264,7 +6264,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       parent: "B2_mode",
       section: "Builder requirements",
       dependantAnswer: "Enter details manually",
-      type: "text",
+      type: "number",
       options: null,
       helpText: "Enter your NSW building licence number exactly as it appears on your licence document."
     },
@@ -6352,7 +6352,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       parent: "B5_mode",
       section: "Builder requirements",
       dependantAnswer: "Enter details manually",
-      type: "text",
+      type: "number",
       options: null,
       helpText: "Enter your HBCF insurance policy number for verification purposes."
     },
@@ -6521,7 +6521,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       parent: "C1_mode",
       section: "About your payment claim",
       dependantAnswer: "Enter details manually",
-      type: "text",
+      type: "number",
       options: null,
       helpText: "Enter any reference number or identifier for your payment claim."
     },
@@ -6576,7 +6576,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       parent: null,
       section: "About your payment claim",
       dependantAnswer: null,
-      type: "currency",
+      type: "number",
       options: null,  
       helpText: "Enter the total amount you're claiming for this work. This should include all work completed, materials supplied, and any other costs you're entitled to."
     },
@@ -6811,7 +6811,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       parent: "PS_mode",
       section: "What happened after you sent your claim?",
       dependantAnswer: "Enter details manually",
-      type: "currency",
+      type: "number",
       options: null,
       helpText: "Enter the amount the respondent agreed to pay in their Payment Schedule."
     },

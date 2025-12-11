@@ -1356,7 +1356,7 @@ export const sopanswRespondentQuestionnaire4: Questionnaire = {
       parent: "RC0",
       dependantAnswer: "Enter details manually",
       section: "Payment Claim",
-      type: "currency",
+      type: "number",
       helpText: "Enter the total amount claimed, including GST if applicable. Under Section 13(2)(b), a Payment Claim must state the amount claimed. This is the amount you must pay in full if you don't serve a Payment Schedule within 10 business days."
     },
     {
@@ -1450,7 +1450,7 @@ export const sopanswRespondentQuestionnaire4: Questionnaire = {
       parent: "PS0",
       dependantAnswer: "Enter details manually",
       section: "Payment Schedule",
-      type: "currency",
+      type: "number",
       helpText: "Enter the amount you stated you would pay in your Payment Schedule. Under Section 14(2)(a), the Payment Schedule must state the scheduled amount. This is the amount you must pay by the due date to avoid adjudication."
     },
 
