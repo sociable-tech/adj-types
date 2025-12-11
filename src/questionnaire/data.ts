@@ -2120,7 +2120,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
       id: "Q8a",
       text: "Have you already served a payment claim for this work?",
       key: "payment_claim_served",
-      parent: "Q8", // CORRECTED: Depends on Q8 (role determination)
+      parent: null, // CORRECTED: Depends on Q8 (role determination)
       section: "Payment Claim Information",
       dependantAnswer: null, // Shows after Q8 regardless of path
       type: "boolean",
