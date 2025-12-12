@@ -2133,7 +2133,7 @@ export const sopanswQuestionnaireComprehensive7: Questionnaire = {
       key: "claim_amount",
       parent: "Q8a",
       section: "Payment Claim Information",
-      dependantAnswer: "Yes",
+      dependantAnswer: null,
       type: "number",
       options: null,
       helpText: "Enter the total amount you're claiming for this work. This should include all work completed, materials supplied, and any other costs you're entitled to. This information will be used to prefill Phase 2 forms."
