@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.32.7 (2025-12-12)
+
+
+### Bug Fixes
+
+* correct description formatting in package.json ([c4195c4](https://github.com/sociable-tech/adj-types/commit/c4195c47abbb608f27b172ab4cad5c5b9803041e))
+
 ### 1.32.5 (2025-12-11)
 
 ### 1.32.3 (2025-12-11)
