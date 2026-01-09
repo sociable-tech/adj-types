@@ -1223,6 +1223,16 @@ export const sopanswRespondentQuestionnaire4: Questionnaire = {
 
     // SECTION B: Project / Contract Context
     {
+      id: "CONTRACT_FILE",
+      text: "Upload your contract document (optional)",
+      key: "contract_file",
+      parent: null,
+      dependantAnswer: null,
+      section: "Contract Details",
+      type: "file-upload",
+      helpText: "Upload a copy of your signed contract. This helps with case validation but is optional."
+    },
+    {
       id: "CT0",
       text: "Where is the construction work for this project carried out?",
       key: "work_location",
@@ -1356,7 +1366,7 @@ export const sopanswRespondentQuestionnaire4: Questionnaire = {
       parent: "RC0",
       dependantAnswer: "Enter details manually",
       section: "Payment Claim",
-      type: "number",
+      type: "currency",
       helpText: "Enter the total amount claimed, including GST if applicable. Under Section 13(2)(b), a Payment Claim must state the amount claimed. This is the amount you must pay in full if you don't serve a Payment Schedule within 10 business days."
     },
     {
@@ -1634,4 +1644,4 @@ export const sopanswRespondentQuestionnaire4: Questionnaire = {
   version: "2.6.0",
   isActive: true,
   isPublic: true
-};  
+}; 
