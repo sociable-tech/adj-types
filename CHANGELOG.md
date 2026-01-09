@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### 1.32.9 (2026-01-09)
+
+
+### Bug Fixes
+
+* update questions in claimant and respondent's questionnaires ([#47](https://github.com/sociable-tech/adj-types/issues/47)) ([bf6c6d8](https://github.com/sociable-tech/adj-types/commit/bf6c6d8c3ea7788689e1dc884f36d2ffcd349013))
+
 ### 1.32.8 (2025-12-12)
 
 ### 1.32.7 (2025-12-12)
