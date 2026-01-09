@@ -6191,14 +6191,14 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
     },
     {
       id: "CONTRACT2",
-      text: "Has your contract been completed?",
+      text: "What is the status of work under the arrangement?",
       key: "contract_completed",
       parent: "CONTRACT1",
       section: "Contract Information",
       dependantAnswer: null,
       type: "boolean",
-      options: ["Yes", "No", "Ongoing"],
-      helpText: "Select whether your contract has been completed."
+      options: ["Completed", "On going", "Not started yet"],
+      helpText: "Select the current status of work under the contract or arrangement."
     },
     {
       id: "CONTRACT2a",
@@ -6206,16 +6206,27 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       key: "contract_completion_date",
       parent: "CONTRACT2",
       section: "Contract Information",
-      dependantAnswer: "Yes",
+      dependantAnswer: "Completed",
       type: "date",
       options: null,
       helpText: "Enter the date when all work under the contract was completed."
+    },
+    {
+      id: "CONTRACT_FILE",
+      text: "Upload your contract document (optional)",
+      key: "contract_file",
+      parent: null,
+      section: "Contract Information",
+      dependantAnswer: null,
+      type: "file-upload",
+      options: null,
+      helpText: "Upload a copy of your signed contract. This helps with case validation but is optional."
     },
     
     // Case Information (respondent name before case title)
     {
       id: "CASE3",
-      text: "Who are you making this claim against? (Respondent's name)",
+      text: "Please enter the respondent's name",
       key: "respondent_name",
       parent: null,
       section: "Tell us about your case",
@@ -6264,7 +6275,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       parent: "B2_mode",
       section: "Builder requirements",
       dependantAnswer: "Enter details manually",
-      type: "number",
+      type: "text",
       options: null,
       helpText: "Enter your NSW building licence number exactly as it appears on your licence document."
     },
@@ -6352,7 +6363,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       parent: "B5_mode",
       section: "Builder requirements",
       dependantAnswer: "Enter details manually",
-      type: "number",
+      type: "text",
       options: null,
       helpText: "Enter your HBCF insurance policy number for verification purposes."
     },
@@ -6521,7 +6532,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       parent: "C1_mode",
       section: "About your payment claim",
       dependantAnswer: "Enter details manually",
-      type: "number",
+      type: "text",
       options: null,
       helpText: "Enter any reference number or identifier for your payment claim."
     },
@@ -6548,35 +6559,24 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       helpText: "Enter the end date of the work period covered by this payment claim."
     },
     {
-      id: "C1",
-      text: "What work does this claim cover?",
-      key: "claim_scope",
-      parent: "C0",
-      section: "About your payment claim",
-      dependantAnswer: "Yes",
-      type: "long-text",
-      options: null,
-      helpText: "Describe the construction work, goods, or services that this payment claim covers. Be specific about what was completed and when."
-    },
-    {
       id: "C1b",
       text: "When did you last perform work or supply goods under this contract?",
       key: "last_work_date",
-      parent: "C1",
+      parent: "C0",
       section: "About your payment claim",
-      dependantAnswer: null,
+      dependantAnswer: "Yes",
       type: "date",
       options: null,
       helpText: "Claims must be served within 12 months of your last work/supply date under SOPA NSW s.13(4)."
     },
     {
       id: "C2",
-      text: "How much are you claiming?",
+      text: "What is the value of claim exclusive of GST?",
       key: "claimed_amount",
       parent: null,
       section: "About your payment claim",
       dependantAnswer: null,
-      type: "number",
+      type: "currency",
       options: null,  
       helpText: "Enter the total amount you're claiming for this work. This should include all work completed, materials supplied, and any other costs you're entitled to."
     },
@@ -6683,7 +6683,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
     },
     {
       id: "T3",
-      text: "Has your contract been ended or cancelled?",
+      text: "Has your arrangement been terminated?",
       key: "contract_terminated",
       parent: "T1",
       section: "When and how was your claim sent?",
@@ -6762,13 +6762,13 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
     // --- Payment Schedule ---
     {
       id: "PS1",
-      text: "Did the respondent send you a Payment Schedule?",
+      text: "Has the respondent issued a Payment Schedule?",
       key: "payment_schedule_received",
       parent: "C0",
       section: "What happened after you sent your claim?",
       dependantAnswer: "Yes",
       type: "boolean",
-      options: ["Yes", "No"],
+      options: ["Yes I have a payment schedule", "No not yet"],
       helpText: "A Payment Schedule is the respondent's response to your payment claim. They must send one within 10 business days or pay the full amount."
     },
     {
@@ -6777,7 +6777,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       key: "payment_schedule_mode",
       parent: "PS1",
       section: "What happened after you sent your claim?",
-      dependantAnswer: "Yes",
+      dependantAnswer: "Yes I have a payment schedule",
       type: "boolean",
       options: ["Upload", "Enter details manually"],
       helpText: "You can upload the Payment Schedule document or provide the details manually. Having the actual document helps with case validation."
@@ -6811,7 +6811,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       parent: "PS_mode",
       section: "What happened after you sent your claim?",
       dependantAnswer: "Enter details manually",
-      type: "number",
+      type: "currency",
       options: null,
       helpText: "Enter the amount the respondent agreed to pay in their Payment Schedule."
     },
@@ -6834,7 +6834,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
       key: "adjudication_notice_given",
       parent: "PS1",
       section: "Notice of Intention",
-      dependantAnswer: "No",
+      dependantAnswer: "No not yet",
       type: "boolean",
       options: ["Yes", "No"],
       helpText: "If the respondent didn't send a Payment Schedule or didn't pay the scheduled amount, you can apply for adjudication. You must first send a Notice of Intention."
@@ -6897,7 +6897,7 @@ export const sopanswPhase2QuestionnaireContractualAndDateSpecific4: Questionnair
   state: "NSW",
   jurisdiction: "SOPA NSW",
   tags: ["eligibility", "construction", "contract", "sopa", "nsw", "enhanced", "phase2"],
-  version: "7.0.0",
+  version: "6.0.0",
   isActive: true,
   isPublic: true
 };
